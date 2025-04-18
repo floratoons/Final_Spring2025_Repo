@@ -17,7 +17,7 @@ public class CharacterPlayer : MonoBehaviour
     public Transform cameraTransform;
 
     // jumping
-    private float gravity = -9.81f;
+    private float gravity = -10f;
     public bool onGround;
     public bool isJumping = false;
 
@@ -39,7 +39,6 @@ public class CharacterPlayer : MonoBehaviour
         }*/
 
         Time.timeScale = 1f;
-        jumpForce = 150f;
         controller = GetComponent<CharacterController>();
 
         // lock the cursor to the middle of the screen
@@ -51,7 +50,7 @@ public class CharacterPlayer : MonoBehaviour
     void Update()
     {
 
-        //PlayerFollow();
+        PlayerFollow();
 
         // restart build
         if (Input.GetKeyDown(KeyCode.Alpha0))
@@ -61,40 +60,11 @@ public class CharacterPlayer : MonoBehaviour
 
     }
 
-    /*
-    private const float YMin = -50.0f;
-    private const float YMax = 50.0f;
-
-    public Transform lookAt;
-
-    public Transform Player;
-
-    public float distance = 10.0f;
-    private float currentX = 0.0f;
-    private float currentY = 0.0f;
-    public float sensivity = 4.0f;
-
-    // Update is called once per frame
-    void LateUpdate()
-    {
-        currentX += Input.GetAxis("Mouse X") * sensivity * Time.deltaTime;
-        currentY += Input.GetAxis("Mouse Y") * sensivity * Time.deltaTime;
-
-        currentY = Mathf.Clamp(currentY, YMin, YMax);
-
-        Vector3 Direction = new Vector3(0, 0, -distance);
-        Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
-        transform.position = lookAt.position + rotation * Direction;
-
-        transform.LookAt(lookAt.position);
-    }
-    */
-    
     private void PlayerFollow()
     {
         // getting mouse inputs and assigning them to variables
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        //float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
         // when mouse moves horizontally, player rotates around the y axis to look left/right
         // stores the mousex and adds to it
@@ -105,10 +75,10 @@ public class CharacterPlayer : MonoBehaviour
 
         // decrease the x rotation when moving the mouse up, so the camera tilts up
         // increase the x rotation when moving the camera down so it tilts downwards
-        /*xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90, 90); //prevent looking Too far back*/
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -30, 30); //prevent looking Too far back
 
-        cameraTransform.localRotation = Quaternion.Euler(xRotation, 0, 0);
+        //cameraTransform.localRotation = Quaternion.Euler(xRotation, 0, 0);
 
         MovePlayer();
 
