@@ -8,6 +8,7 @@ TagManager:
   - Town
   - GM
   - MM
+  - Menu
   layers:
   - Default
   - TransparentFX

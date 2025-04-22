@@ -40,7 +40,7 @@ public class ButtonManager : MonoBehaviour
     {
         cam = GameObject.Find("Main Camera");
 
-        if /*(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("1_Menu"))
+        /*if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("1_Menu"))
         {
             locationButton0 = GameObject.Find("Work Button").GetComponent<Button>();
             locationButton1 = GameObject.Find("Town Button").GetComponent<Button>();
