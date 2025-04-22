@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b8c31e5eeb241b141979d8f4404fa4fa, type: 2}
     - target: {fileID: -927199367670048503, guid: 20595676462a09b4aa9eb203e18278fa, type: 3}
       propertyPath: m_Name
-      value: Right_GemBlue
+      value: Hold_GemBlue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

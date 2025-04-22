@@ -24,14 +24,24 @@ public class ItemManager : MonoBehaviour
             // moves down the gem index list and then wraps back around to the beginning
             int nextGemIndex = (currentGemIndex + 1) % gemList.Count;
             SwitchGem(nextGemIndex);
+            /*if (currentGemIndex > 6)
+            {
+                currentGemIndex = 0;
+            }*/
             Debug.Log("Gem= " + currentGemIndex);
         }
         else if (scrollInput < 0)
         {
             //scrollCountTest -= 1;
             //Debug.Log("scrolled down, scrollCount= " + scrollCountTest);
-            int nextGemIndex = (currentGemIndex - 1) % gemList.Count;
+            /*int nextGemIndex = (currentGemIndex - 1) % gemList.Count;
             SwitchGem(nextGemIndex);
+            if (currentGemIndex < 0)
+            {
+                currentGemIndex = 6;
+            }*/
+            scrollInput = 0;
+            
             Debug.Log("Gem= " + currentGemIndex);
         }
     }
@@ -62,6 +72,6 @@ public class ItemManager : MonoBehaviour
         currentGemIndex = index;
         gemList[currentGemIndex].SetActive(true);
 
-        Debug.Log("Switched Weapon");
+        Debug.Log("Switched gem");
     }
 }

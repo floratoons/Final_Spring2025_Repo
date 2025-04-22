@@ -37,12 +37,14 @@ public class ItemPlace : MonoBehaviour
 
         void placeInSpot()
         {
+            
+            Debug.Log("Placed a gem");
             // instantiate and parent directly to gem place slot
-            GameObject newGem = Instantiate(ItemPickupScript.gemPrefab, placeSlot.position, Quaternion.identity, placeSlot);
+            GameObject placedGem = Instantiate(ItemPickupScript.gemPrefab, placeSlot.position, Quaternion.identity, placeSlot);
 
             // resetting the position and rotation to make sure it fits in the "socket"
-            newGem.transform.localPosition = Vector3.zero;
-            newGem.transform.localRotation = Quaternion.identity;
+            placedGem.transform.localPosition = Vector3.zero;
+            placedGem.transform.localRotation = Quaternion.identity;
 
             // ** remove gem from the list, and take it out of inventory?
             

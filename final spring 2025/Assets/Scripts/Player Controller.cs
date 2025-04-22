@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class CharacterPlayer : MonoBehaviour
 {
-    private Transform playerTP;
     private Vector3 playerMovementInput;
     private Vector3 velocity;
     private CharacterController controller;
@@ -52,25 +51,24 @@ public class CharacterPlayer : MonoBehaviour
     {
 
         PlayerFollow();
-
+        
         // restart build, test keys
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        /*if (Input.GetKeyDown(KeyCode.Alpha9))
+        if (Input.GetKeyDown(KeyCode.Alpha9))
         {
-            playerTP = ;
+            transform.position = new Vector3(-59,215,-2);
         }
         if (Input.GetKeyDown(KeyCode.Alpha8))
         {
-            playerTP = ;
+            transform.position = new Vector3(97, 215, 294);
         }
         if (Input.GetKeyDown(KeyCode.Alpha7))
         {
-            playerTP = ;
+            transform.position = new Vector3(1,-12,-4);
         }
-        */
     }
 
     private void PlayerFollow()
