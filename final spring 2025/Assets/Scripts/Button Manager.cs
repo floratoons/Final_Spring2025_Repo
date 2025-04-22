@@ -12,29 +12,10 @@ public class ButtonManager : MonoBehaviour
     public Button locationButton0, locationButton1;
 
     public GameObject cam;
-    public Button menuButton;
 
-    void Awake()
-    {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("GM");
-
-        if (objs.Length > 1)
-        {
-            Destroy(this.gameObject);
-        }
-
-        DontDestroyOnLoad(this.gameObject);
-    }
-
-
-    public void Menu()
+    public void Scenes()
     {
         SceneManager.LoadScene(1);
-    }
-
-    public void Level1()
-    {
-        SceneManager.LoadScene(2);
     }
 
     /*public void Scenes()
@@ -59,7 +40,7 @@ public class ButtonManager : MonoBehaviour
     {
         cam = GameObject.Find("Main Camera");
 
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("1_Menu"))
+        if /*(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("1_Menu"))
         {
             locationButton0 = GameObject.Find("Work Button").GetComponent<Button>();
             locationButton1 = GameObject.Find("Town Button").GetComponent<Button>();
@@ -83,16 +64,7 @@ public class ButtonManager : MonoBehaviour
                     cam.transform.position = sceneLocations[1];
                 });
             }
-        }
-        
-        // from scenes to menu button
-        if (menuButton != null)
-        {
-            menuButton.onClick.AddListener(() =>
-            {
-                SceneManager.LoadScene(1);
-            });
-        }
+        }*/
     }
 
     /*private IEnumerator Timer()
