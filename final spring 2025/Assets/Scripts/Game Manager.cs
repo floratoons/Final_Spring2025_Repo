@@ -17,16 +17,18 @@ public class GameManager : MonoBehaviour
     {
         GameObject[] objs = GameObject.FindGameObjectsWithTag("GM");
 
-        if (objs.Length > 1)
+        /*if (objs.Length > 1)
         {
             Destroy(this.gameObject);
         }
+        DontDestroyOnLoad(this.gameObject);*/
 
-        DontDestroyOnLoad(this.gameObject);
     }
 
     private void Start()
     {
+        MMScript = GameObject.Find("MM").GetComponent<MusicManager>();
+
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
             MMScript.MusicTadpole();
@@ -36,6 +38,7 @@ public class GameManager : MonoBehaviour
         {
             MMScript.MusicAbstract();
 
+            // find the menu & notebook 
             menu = GameObject.FindWithTag("Menu").GetComponent<Canvas>();
             notebook = GameObject.Find("Notebook").GetComponent<SpriteRenderer>();
             dialoguecanvas = GameObject.Find("DialogueBox").GetComponent<Canvas>();
@@ -44,6 +47,7 @@ public class GameManager : MonoBehaviour
         {
             MMScript.MusicWater();
 
+            // find the menu & notebook 
             menu = GameObject.FindWithTag("Menu").GetComponent<Canvas>();
             notebook = GameObject.Find("Notebook").GetComponent<SpriteRenderer>();
         }

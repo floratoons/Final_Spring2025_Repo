@@ -9,6 +9,7 @@ TagManager:
   - GM
   - MM
   - Menu
+  - Ped
   layers:
   - Default
   - TransparentFX

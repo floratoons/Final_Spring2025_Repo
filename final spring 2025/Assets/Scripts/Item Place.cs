@@ -5,15 +5,16 @@ using UnityEngine;
 public class ItemPlace : MonoBehaviour
 {
     public bool inArea;
-    public Transform placeSlot;
+    public Vector3 placeSpot;
 
-    ItemPickup ItemPickupScript;
+    ItemManager ItemManagerScript;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             inArea = true;
+            // visual cue
         }
     }
     private void OnTriggerExit(Collider other)
@@ -27,30 +28,14 @@ public class ItemPlace : MonoBehaviour
 
     void Update()
     {
+        ItemManagerScript = GameObject.Find("Player").GetComponent<ItemManager>();
+
         {
             if (this.gameObject.activeInHierarchy && Input.GetMouseButtonDown(0) && inArea)
             {
                 //place the object on a spot
-                placeInSpot();
+                ItemManagerScript.placeInSpot();
             }
-        }
-
-        void placeInSpot()
-        {
-            
-            Debug.Log("Placed a gem");
-            // instantiate and parent directly to gem place slot
-            GameObject placedGem = Instantiate(ItemPickupScript.gemPrefab, placeSlot.position, Quaternion.identity, placeSlot);
-
-            // resetting the position and rotation to make sure it fits in the "socket"
-            placedGem.transform.localPosition = Vector3.zero;
-            placedGem.transform.localRotation = Quaternion.identity;
-
-            // ** remove gem from the list, and take it out of inventory?
-            
-            /*other.GetComponent<ItemManager>().AddGem(newGem);
-            Destroy(gameObject);*/
-
         }
     }
 }

@@ -13,6 +13,13 @@ public class ItemManager : MonoBehaviour
     private float scrollInput;
     //private int scrollCountTest;
 
+    ItemPlace ItemPlaceScript;
+
+    private void Start()
+    {
+        ItemPlaceScript = GameObject.FindWithTag("Ped").GetComponent<ItemPlace>();
+    }
+
     void Update()
     {
         scrollInput = Input.GetAxis("Scroll");
@@ -74,4 +81,35 @@ public class ItemManager : MonoBehaviour
 
         Debug.Log("Switched gem");
     }
+
+    public void placeInSpot()
+    {
+        Debug.Log("Placed a gem");
+        // get current gem in index
+        Vector3 placeSlot = ItemPlaceScript.placeSpot;
+        // move current gem to place slot
+        gemList[currentGemIndex].transform.position = placeSlot;
+
+        // audio cue
+
+        // ** camera stuff (animation)
+        // ** flowers changing
+
+        // ** remove gem from the list?
+        /*other.GetComponent<ItemManager>().RemoveGem(gemList[currentGemIndex]);
+        Destroy(gameObject);*/
+
+        //if (correct)
+        //{
+        //    **register correct placement, lock/ turn off the place area
+        //      visual cue on the placed gem to show that it's locked
+        //}
+        //else if (incorrect)
+        //{
+        //      audio cue that it's wrong
+        //}
+
+
+        }
+
 }
