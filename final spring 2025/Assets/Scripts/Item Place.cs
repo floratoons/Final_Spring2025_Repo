@@ -5,9 +5,16 @@ using UnityEngine;
 public class ItemPlace : MonoBehaviour
 {
     public bool inArea;
-    public Vector3 placeSpot;
+    public Transform placeSpot;
 
     ItemManager ItemManagerScript;
+
+    public GameObject placedGem;
+
+    private void Start()
+    {
+        placeSpot = gameObject.GetComponentInChildren<Transform>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +24,17 @@ public class ItemPlace : MonoBehaviour
             // visual cue
         }
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Gem"))
+        {
+            placedGem = other.gameObject;
+            Debug.Log("Gem placed in area, " + (placedGem));
+            //FindWithTag("Gem");
+        }
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -35,6 +53,7 @@ public class ItemPlace : MonoBehaviour
             {
                 //place the object on a spot
                 ItemManagerScript.placeInSpot();
+
             }
         }
     }

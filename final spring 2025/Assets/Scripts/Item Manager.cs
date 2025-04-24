@@ -13,11 +13,17 @@ public class ItemManager : MonoBehaviour
     private float scrollInput;
     //private int scrollCountTest;
 
+    Vector3 DefaultScale;
+
     ItemPlace ItemPlaceScript;
+    ItemPickup ItemPickupScript;
 
     private void Start()
     {
         ItemPlaceScript = GameObject.FindWithTag("Ped").GetComponent<ItemPlace>();
+        ItemPickupScript = GameObject.FindWithTag("Gem").GetComponent<ItemPickup>();
+
+        DefaultScale = new Vector3((float)0.5, (float)2.5, (float)0.75);
     }
 
     void Update()
@@ -86,9 +92,12 @@ public class ItemManager : MonoBehaviour
     {
         Debug.Log("Placed a gem");
         // get current gem in index
-        Vector3 placeSlot = ItemPlaceScript.placeSpot;
+        Transform placeSlot = ItemPlaceScript.placeSpot;
+        gemList[currentGemIndex].transform.localScale = gemList[currentGemIndex].transform.localScale;
         // move current gem to place slot
-        gemList[currentGemIndex].transform.position = placeSlot;
+        // set the gem's size to its proper size
+        gemList[currentGemIndex].transform.SetParent(placeSlot, worldPositionStays: false);
+        gemList[currentGemIndex].transform.localScale = DefaultScale;
 
         // audio cue
 
@@ -110,6 +119,6 @@ public class ItemManager : MonoBehaviour
         //}
 
 
-        }
+    }
 
 }

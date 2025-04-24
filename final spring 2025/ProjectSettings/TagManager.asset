@@ -10,6 +10,7 @@ TagManager:
   - MM
   - Menu
   - Ped
+  - Gem
   layers:
   - Default
   - TransparentFX

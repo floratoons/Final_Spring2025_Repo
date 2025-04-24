@@ -68,8 +68,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hold_GemGreen
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: ab25a983cb2e3b44a9d49fb00a4ad296, type: 3}
+      propertyPath: m_TagString
+      value: Gem
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: ab25a983cb2e3b44a9d49fb00a4ad296, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8582494313115700719}
   m_SourcePrefab: {fileID: 100100000, guid: ab25a983cb2e3b44a9d49fb00a4ad296, type: 3}
+--- !u!1 &5027507817185564778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: ab25a983cb2e3b44a9d49fb00a4ad296, type: 3}
+  m_PrefabInstance: {fileID: 3955469644945883491}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &8582494313115700719
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5027507817185564778}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0.5, z: 0}

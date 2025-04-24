@@ -24,7 +24,7 @@ public class ItemPickup : MonoBehaviour
 
             // ** add gem to the list, and destroy the gem pickup object
             other.GetComponent<ItemManager>().AddGem(newGem);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
 
         }
     }
