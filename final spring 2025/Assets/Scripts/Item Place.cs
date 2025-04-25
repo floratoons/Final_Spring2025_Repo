@@ -5,7 +5,13 @@ using UnityEngine;
 public class ItemPlace : MonoBehaviour
 {
     public bool inArea;
-    public Transform placeSpot;
+
+    public int pedestalNumber;
+    public Transform placeSpot1;
+    public Transform placeSpot2;
+
+    public Transform staticPlaceSpot;
+    public bool itemPlaced = false;
 
     ItemManager ItemManagerScript;
 
@@ -13,7 +19,16 @@ public class ItemPlace : MonoBehaviour
 
     private void Start()
     {
-        placeSpot = gameObject.GetComponentInChildren<Transform>();
+        ItemManagerScript = GameObject.Find("Player").GetComponent<ItemManager>();
+
+        if (pedestalNumber == 1)
+        {
+            staticPlaceSpot = placeSpot1;
+        }
+        else if (pedestalNumber == 2)
+        {
+            staticPlaceSpot = placeSpot2;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,12 +42,22 @@ public class ItemPlace : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Gem"))
+        Debug.Log("Gem in area");
+        
+        if (itemPlaced)
         {
-            placedGem = other.gameObject;
-            Debug.Log("Gem placed in area, " + (placedGem));
-            //FindWithTag("Gem");
+            if (other.CompareTag("Gem"))
+            {
+                // get the place spot from the certain pedestal's trigger?
+                staticPlaceSpot = gameObject.GetComponentInChildren<Transform>();
+                // grab the gem that is in the pedestal's trigger
+                placedGem = other.gameObject;
+                Debug.Log("Gem placed in area, " + (placedGem));
+                //FindWithTag("Gem");
+            }
         }
+        
+        
     }
 
     private void OnTriggerExit(Collider other)
@@ -46,13 +71,12 @@ public class ItemPlace : MonoBehaviour
 
     void Update()
     {
-        ItemManagerScript = GameObject.Find("Player").GetComponent<ItemManager>();
-
         {
             if (this.gameObject.activeInHierarchy && Input.GetMouseButtonDown(0) && inArea)
             {
+                itemPlaced = true;
                 //place the object on a spot
-                ItemManagerScript.placeInSpot();
+                ItemManagerScript.placeInSpot(staticPlaceSpot);
 
             }
         }

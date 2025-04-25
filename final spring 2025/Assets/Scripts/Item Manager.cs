@@ -81,22 +81,20 @@ public class ItemManager : MonoBehaviour
             gemList[currentGemIndex].SetActive(false);
         }
 
-        // assign the current gem index, and make the current gem in index true?
+        // assign the current gem index, and make the current gem in index true
         currentGemIndex = index;
         gemList[currentGemIndex].SetActive(true);
 
         Debug.Log("Switched gem");
     }
 
-    public void placeInSpot()
+    public void placeInSpot(Transform placeSpot)
     {
-        Debug.Log("Placed a gem");
         // get current gem in index
-        Transform placeSlot = ItemPlaceScript.placeSpot;
         gemList[currentGemIndex].transform.localScale = gemList[currentGemIndex].transform.localScale;
         // move current gem to place slot
         // set the gem's size to its proper size
-        gemList[currentGemIndex].transform.SetParent(placeSlot, worldPositionStays: false);
+        gemList[currentGemIndex].transform.SetParent(placeSpot, worldPositionStays: false);
         gemList[currentGemIndex].transform.localScale = DefaultScale;
 
         // audio cue
@@ -105,8 +103,9 @@ public class ItemManager : MonoBehaviour
         // ** flowers changing
 
         // ** remove gem from the list?
-        /*other.GetComponent<ItemManager>().RemoveGem(gemList[currentGemIndex]);
-        Destroy(gameObject);*/
+
+        gemList.Remove(ItemPlaceScript.placedGem);
+
 
         //if (correct)
         //{
@@ -117,6 +116,8 @@ public class ItemManager : MonoBehaviour
         //{
         //      audio cue that it's wrong
         //}
+
+
 
 
     }

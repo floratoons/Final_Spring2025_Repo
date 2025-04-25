@@ -2292,7 +2292,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2531754660310055686, guid: ecbacf06236ad274ca52315452aaf631, type: 3}
   m_PrefabInstance: {fileID: 6781603610873254522}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &83347622
+--- !u!114 &83347629
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2306,28 +2306,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gemPrefab: {fileID: 2531754660310055686, guid: ecbacf06236ad274ca52315452aaf631, type: 3}
   gemSocket: {fileID: 1944260640}
-  DefaultScale: {x: 0, y: 0, z: 0}
---- !u!135 &83347623
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 83347618}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &84006409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8516,7 +8494,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2214499369163663393, guid: a7739605487602544b8caefbb9212286, type: 3}
   m_PrefabInstance: {fileID: 1329348788843083572}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &384703747
+--- !u!114 &384703754
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8530,28 +8508,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gemPrefab: {fileID: 2214499369163663393, guid: a7739605487602544b8caefbb9212286, type: 3}
   gemSocket: {fileID: 1944260640}
-  DefaultScale: {x: 0, y: 0, z: 0}
---- !u!135 &384703748
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 384703743}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0.00000008195639, y: 0.49999994, z: 0}
 --- !u!1001 &387022475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9371,7 +9327,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8588293359765600197, guid: 2f23f68aa3ce05c4a8b5a37ae6a4ccbf, type: 3}
   m_PrefabInstance: {fileID: 8259061349142544944}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &429922513
+--- !u!114 &429922523
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9385,28 +9341,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gemPrefab: {fileID: 8588293359765600197, guid: 2f23f68aa3ce05c4a8b5a37ae6a4ccbf, type: 3}
   gemSocket: {fileID: 1944260640}
-  DefaultScale: {x: 0, y: 0, z: 0}
---- !u!135 &429922517
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 429922512}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0.5096618, z: 0.000000014901161}
 --- !u!1001 &438250773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14069,7 +14003,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6966465437736742179, guid: 879dda1cd7a4a6349bf7f2f92bb53e1e, type: 3}
   m_PrefabInstance: {fileID: 8987163475461489948}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &696027107
+--- !u!114 &696027114
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14083,28 +14017,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gemPrefab: {fileID: 6966465437736742179, guid: 879dda1cd7a4a6349bf7f2f92bb53e1e, type: 3}
   gemSocket: {fileID: 1944260640}
-  DefaultScale: {x: 0, y: 0, z: 0}
---- !u!135 &696027108
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696027103}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.49999997
-  m_Center: {x: 0, y: 0.49999994, z: 0}
 --- !u!1001 &703231815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14301,7 +14213,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inArea: 0
-  placeSpot: {fileID: 1205565558}
+  pedestalNumber: 1
+  placeSpot1: {fileID: 1205565558}
+  placeSpot2: {fileID: 811176307}
+  staticPlaceSpot: {fileID: 0}
+  itemPlaced: 0
+  placedGem: {fileID: 0}
 --- !u!1001 &705818442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33599,7 +33516,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 447179521849524385, guid: 607e198e754ae9443990ea6b15118a63, type: 3}
   m_PrefabInstance: {fileID: 1778669080481147175}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1471954063
+--- !u!114 &1471954070
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33613,28 +33530,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gemPrefab: {fileID: 447179521849524385, guid: 607e198e754ae9443990ea6b15118a63, type: 3}
   gemSocket: {fileID: 1944260640}
-  DefaultScale: {x: 0, y: 0, z: 0}
---- !u!135 &1471954064
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471954059}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0.5, z: 0.000000007450581}
 --- !u!1001 &1473527772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42361,7 +42256,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inArea: 0
-  placeSpot: {fileID: 811176307}
+  pedestalNumber: 2
+  placeSpot1: {fileID: 1205565558}
+  placeSpot2: {fileID: 811176307}
+  staticPlaceSpot: {fileID: 0}
+  itemPlaced: 0
+  placedGem: {fileID: 0}
 --- !u!1 &1853991412
 GameObject:
   m_ObjectHideFlags: 0
@@ -42974,7 +42874,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5027507817185564778, guid: 4b4fbb23b93ea59489ed6f049d0b4e83, type: 3}
   m_PrefabInstance: {fileID: 8344389774803869784}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1879158956
+--- !u!114 &1879158963
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42988,28 +42888,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gemPrefab: {fileID: 5027507817185564778, guid: 4b4fbb23b93ea59489ed6f049d0b4e83, type: 3}
   gemSocket: {fileID: 1944260640}
-  DefaultScale: {x: 0, y: 0, z: 0}
---- !u!135 &1879158957
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1879158952}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &1884540715
 GameObject:
   m_ObjectHideFlags: 0
@@ -46561,7 +46439,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4972284362436218122, guid: f775bb1967db8e54d984f69a7ffce37a, type: 3}
   m_PrefabInstance: {fileID: 6214488431583509383}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2094855557
+--- !u!114 &2094855564
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46575,28 +46453,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gemPrefab: {fileID: 4972284362436218122, guid: f775bb1967db8e54d984f69a7ffce37a, type: 3}
   gemSocket: {fileID: 1944260640}
-  DefaultScale: {x: 0, y: 0, z: 0}
---- !u!135 &2094855558
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2094855553}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &2097173869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47864,16 +47720,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7145142262504712387, guid: a7739605487602544b8caefbb9212286, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2214499369163663393, guid: a7739605487602544b8caefbb9212286, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 384703747}
-    - targetCorrespondingSourceObject: {fileID: 2214499369163663393, guid: a7739605487602544b8caefbb9212286, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 384703748}
+      addedObject: {fileID: 384703754}
   m_SourcePrefab: {fileID: 100100000, guid: a7739605487602544b8caefbb9212286, type: 3}
 --- !u!1001 &1778669080481147175
 PrefabInstance:
@@ -47883,6 +47740,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6258382821892235685, guid: 607e198e754ae9443990ea6b15118a63, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 447179521849524385, guid: 607e198e754ae9443990ea6b15118a63, type: 3}
       propertyPath: m_Name
       value: Wrong_GemYellow
@@ -47933,10 +47794,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 447179521849524385, guid: 607e198e754ae9443990ea6b15118a63, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1471954063}
-    - targetCorrespondingSourceObject: {fileID: 447179521849524385, guid: 607e198e754ae9443990ea6b15118a63, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1471954064}
+      addedObject: {fileID: 1471954070}
   m_SourcePrefab: {fileID: 100100000, guid: 607e198e754ae9443990ea6b15118a63, type: 3}
 --- !u!1001 &6214488431583509383
 PrefabInstance:
@@ -47946,6 +47804,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3195693588955754375, guid: f775bb1967db8e54d984f69a7ffce37a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4972284362436218122, guid: f775bb1967db8e54d984f69a7ffce37a, type: 3}
       propertyPath: m_Name
       value: Wrong_GemPink
@@ -47996,10 +47858,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4972284362436218122, guid: f775bb1967db8e54d984f69a7ffce37a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2094855557}
-    - targetCorrespondingSourceObject: {fileID: 4972284362436218122, guid: f775bb1967db8e54d984f69a7ffce37a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2094855558}
+      addedObject: {fileID: 2094855564}
   m_SourcePrefab: {fileID: 100100000, guid: f775bb1967db8e54d984f69a7ffce37a, type: 3}
 --- !u!1001 &6554141169097853565
 PrefabInstance:
@@ -48210,6 +48069,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6678756496072214376, guid: ecbacf06236ad274ca52315452aaf631, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1547479791101184277, guid: ecbacf06236ad274ca52315452aaf631, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.38453
@@ -48260,10 +48123,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2531754660310055686, guid: ecbacf06236ad274ca52315452aaf631, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 83347622}
-    - targetCorrespondingSourceObject: {fileID: 2531754660310055686, guid: ecbacf06236ad274ca52315452aaf631, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 83347623}
+      addedObject: {fileID: 83347629}
   m_SourcePrefab: {fileID: 100100000, guid: ecbacf06236ad274ca52315452aaf631, type: 3}
 --- !u!1001 &8259061349142544944
 PrefabInstance:
@@ -48273,6 +48133,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5781516959305621330, guid: 2f23f68aa3ce05c4a8b5a37ae6a4ccbf, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4716648242626577878, guid: 2f23f68aa3ce05c4a8b5a37ae6a4ccbf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.8694701
@@ -48323,10 +48187,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8588293359765600197, guid: 2f23f68aa3ce05c4a8b5a37ae6a4ccbf, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 429922513}
-    - targetCorrespondingSourceObject: {fileID: 8588293359765600197, guid: 2f23f68aa3ce05c4a8b5a37ae6a4ccbf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 429922517}
+      addedObject: {fileID: 429922523}
   m_SourcePrefab: {fileID: 100100000, guid: 2f23f68aa3ce05c4a8b5a37ae6a4ccbf, type: 3}
 --- !u!1001 &8344389774803869784
 PrefabInstance:
@@ -48380,16 +48241,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8582494313115700719, guid: 4b4fbb23b93ea59489ed6f049d0b4e83, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5027507817185564778, guid: 4b4fbb23b93ea59489ed6f049d0b4e83, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1879158956}
-    - targetCorrespondingSourceObject: {fileID: 5027507817185564778, guid: 4b4fbb23b93ea59489ed6f049d0b4e83, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1879158957}
+      addedObject: {fileID: 1879158963}
   m_SourcePrefab: {fileID: 100100000, guid: 4b4fbb23b93ea59489ed6f049d0b4e83, type: 3}
 --- !u!1001 &8987163475461489948
 PrefabInstance:
@@ -48399,6 +48261,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1223611344025045087, guid: 879dda1cd7a4a6349bf7f2f92bb53e1e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6266339689251430192, guid: 879dda1cd7a4a6349bf7f2f92bb53e1e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.903469
@@ -48449,10 +48315,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6966465437736742179, guid: 879dda1cd7a4a6349bf7f2f92bb53e1e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 696027107}
-    - targetCorrespondingSourceObject: {fileID: 6966465437736742179, guid: 879dda1cd7a4a6349bf7f2f92bb53e1e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 696027108}
+      addedObject: {fileID: 696027114}
   m_SourcePrefab: {fileID: 100100000, guid: 879dda1cd7a4a6349bf7f2f92bb53e1e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
