@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     MusicManager MMScript;
     ButtonManager BMScript;
 
-    private Canvas menu;
+    public Canvas menu;
     private SpriteRenderer notebook;
     private Canvas dialoguecanvas;
 
@@ -40,14 +40,13 @@ public class GameManager : MonoBehaviour
 
             // find the menu & notebook 
             menu = GameObject.FindWithTag("Menu").GetComponent<Canvas>();
-            notebook = GameObject.Find("Notebook").GetComponent<SpriteRenderer>();
             dialoguecanvas = GameObject.Find("DialogueBox").GetComponent<Canvas>();
         }
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             MMScript.MusicWater();
 
-            // find the menu & notebook 
+            // find the menu
             menu = GameObject.FindWithTag("Menu").GetComponent<Canvas>();
             notebook = GameObject.Find("Notebook").GetComponent<SpriteRenderer>();
         }
@@ -59,7 +58,6 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M))
         {
             menu.enabled = true;
-            notebook.enabled = true;
             if (SceneManager.GetActiveScene().buildIndex == 1)
             {
                 dialoguecanvas.enabled = false;
@@ -68,7 +66,6 @@ public class GameManager : MonoBehaviour
         if (menu == true && Input.GetKey(KeyCode.Escape))
         {
             menu.enabled = false;
-            notebook.enabled = false;
             if (SceneManager.GetActiveScene().buildIndex == 1)
             {
                 dialoguecanvas.enabled = true;
