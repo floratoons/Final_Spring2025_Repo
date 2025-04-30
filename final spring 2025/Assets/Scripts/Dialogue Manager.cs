@@ -52,11 +52,13 @@ public class DialogueManager : MonoBehaviour
         }
 
         // ensure continue button is below all of the instantiated text bubbles and buttons
-        continueButton.transform.SetAsLastSibling();
+        // continueButton.transform.SetAsLastSibling();
         // clear all the old choice buttons
         foreach (Transform _child in choiceParent) Destroy(_child.gameObject);
         // hide the continue button on default
-        continueButton.gameObject.SetActive(false);
+        continueButton.gameObject.GetComponent<Button>().interactable = false;
+        continueButton.gameObject.GetComponent<Image>().color = Color.grey;
+        // SetActive(false);
         // button choices appear after the latest chat line
         choiceParent.transform.SetAsLastSibling();
 
@@ -107,16 +109,18 @@ public class DialogueManager : MonoBehaviour
         else if (line.nextLine != null)
         {
             // if there are no dialogue choices, show the continue button
-            continueButton.gameObject.SetActive(true);
-                // clear everything
-                // using the same button for different lines
-                // so we don't want the previous dialogue lines to stack over each other
-                continueButton.onClick.RemoveAllListeners();
+            continueButton.gameObject.GetComponent<Button>().interactable = true;
+            continueButton.gameObject.GetComponent<Image>().color = Color.white;
+            // clear everything
+            // using the same button for different lines
+            // so we don't want the previous dialogue lines to stack over each other
+            continueButton.onClick.RemoveAllListeners();
                 // when the button is clicked, run the code and it'll continue to the next line
                 continueButton.onClick.AddListener(() =>
                 {
                     UpdateDialogue(line.nextLine);
-                    continueButton.gameObject.SetActive(false);
+                    continueButton.gameObject.GetComponent<Button>().interactable = false;
+                    continueButton.gameObject.GetComponent<Image>().color = Color.grey;
                 });
         }
 

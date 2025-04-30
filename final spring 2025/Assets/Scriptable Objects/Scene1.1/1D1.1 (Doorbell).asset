@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
-  m_Name: 1D2
+  m_Name: 1D1.1 (Doorbell)
   m_EditorClassIdentifier: 
-  speakerName: Io
+  speakerName: 
   dialogueLinesList:
-  - "Thought too soon. Damn it.\r"
-  - "Maybe you should be drinking coffee, or something. Then you wouldn\u2019t have
-    so many strange dreams.\r"
-  nextLine: {fileID: 11400000, guid: c5ac8dcb8c8a26f428d4dcf10533b816, type: 2}
+  - "*Ding ding!*\r"
+  nextLine: {fileID: 11400000, guid: 9acfc8a01fb762045ab22ebd10871904, type: 2}
   choices: []

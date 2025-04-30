@@ -46,7 +46,7 @@ public class SceneTransitioner : MonoBehaviour
             {
                 Debug.Log($"Clicked to {button}, at {scene}");
                 cam.transform.position = (scene);
-                float speed = 5f;
+                //float speed = 5f;
                 //cam.transform.position = Vector3.MoveTowards(currentPos, scene, (speed * Time.deltaTime));
 
                 GMScript.menu.enabled = false;

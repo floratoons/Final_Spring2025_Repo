@@ -17,12 +17,10 @@ MonoBehaviour:
   - "Ah, you fell asleep again. It\u2019s okay, it\u2019s just you in here. Not like
     you have a manager or anything to get on you for sleeping on the job. Not like
     there are any customers\u2026"
-  - '*Ding, ding!*'
-  - "Thought too soon. Damn it.\r"
   nextLine: {fileID: 0}
   choices:
   - choiceText: Look up.
-    nextLine: {fileID: 11400000, guid: 9acfc8a01fb762045ab22ebd10871904, type: 2}
+    nextLine: {fileID: 11400000, guid: 1791502df92744e4e85d3dcd3b95dbfd, type: 2}
     requiredStat: 
     requiredValue: 0
     rewardStat: 
