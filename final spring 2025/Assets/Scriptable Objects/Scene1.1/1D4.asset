@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
-  m_Name: 1Dia3(Choice2)
+  m_Name: 1D4
   m_EditorClassIdentifier: 
   speakerName: Io
   dialogueLinesList:
-  - (3) I'm done talking.
-  nextLine: {fileID: 0}
+  - "Ugh. Tourists. It\u2019s not even that nice out. Could be nicer. The wind off
+    of the bay makes Flanagan\u2019s Point cold all the time. You don\u2019t know
+    why anyone would choose to come here to pretend to see some stupid ghosts.\r"
+  - "\r\u201CSure, I guess. It\u2019s 17.89, cash or card?\u201D"
+  nextLine: {fileID: 11400000, guid: 8267286227afd964e8f66f08336117d1, type: 2}
   choices: []

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 1D7B.2
+  m_EditorClassIdentifier: 
+  speakerName: Random Man
+  dialogueLinesList:
+  - "\u201COh, wow, seriously? But you live here? Wow! "
+  - "Well, just make sure you\u2019re watching out, there\u2019s some spooky stuff
+    going on in the bay around this town! "
+  - 'The haunts here have, like, their own genre of ghost-hunting posting online! '
+  - Y'know, if you have some free time, you should check out that haunted ferry tour!
+    I basically drove here from Missouri to take one!
+  - "Alright, well, have a good one!\u201D"
+  nextLine: {fileID: 11400000, guid: ede08faf93fa6d64c87b5394e5b5b983, type: 2}
+  choices: []

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 1D5
+  m_EditorClassIdentifier: 
+  speakerName: Random Man
+  dialogueLinesList:
+  - "\u201COh, uh, card. Anyways, are you a local?\u201D\r"
+  nextLine: {fileID: 11400000, guid: cb7615363612c6540bb88ebd9929af8b, type: 2}
+  choices: []

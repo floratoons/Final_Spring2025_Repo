@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 1D7
+  m_EditorClassIdentifier: 
+  speakerName: Random Man
+  dialogueLinesList:
+  - "\u201CHave you heard about the whole\u2026 Jenna Caplan thing?\u201D"
+  nextLine: {fileID: 0}
+  choices:
+  - choiceText: Be honest.
+    nextLine: {fileID: 11400000, guid: c78ff46801c79654d8e1925cf0a2365d, type: 2}
+    requiredStat: 
+    requiredValue: 0
+    rewardStat: 
+    rewardValue: 0
+  - choiceText: Be dismissive.
+    nextLine: {fileID: 11400000, guid: 816014ce24b362748a4f7347f1c03812, type: 2}
+    requiredStat: 
+    requiredValue: 0
+    rewardStat: 
+    rewardValue: 0

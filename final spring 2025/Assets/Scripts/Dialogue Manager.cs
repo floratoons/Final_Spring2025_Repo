@@ -17,8 +17,7 @@ public class DialogueManager : MonoBehaviour
     public Transform choiceParent;
     public Button continueButton; 
 
-    // homework: create "active" dialogue, highlight/change them to a certain color
-    // and then revert to blank/not-highlighted when they're not active
+    // npc portraits & movement?
 
     public void StartingDialogue()
     {
