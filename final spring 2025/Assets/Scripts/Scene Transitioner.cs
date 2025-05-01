@@ -24,7 +24,6 @@ public class SceneTransitioner : MonoBehaviour
         GMScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
-
     // Update is called once per frame
     void Update()
     {
@@ -32,6 +31,7 @@ public class SceneTransitioner : MonoBehaviour
 
         if (menuCanvas)
         {
+            //when canvas is up & button clicked -> move to vector3 -> based on which button
             sceneTrans(sceneLocations[1], homeButton);
             sceneTrans(sceneLocations[2], wharfButton);
             sceneTrans(sceneLocations[3], workButton);
@@ -46,8 +46,6 @@ public class SceneTransitioner : MonoBehaviour
             {
                 Debug.Log($"Clicked to {button}, at {scene}");
                 cam.transform.position = (scene);
-                //float speed = 5f;
-                //cam.transform.position = Vector3.MoveTowards(currentPos, scene, (speed * Time.deltaTime));
 
                 GMScript.menu.enabled = false;
                 //add smoothness to transition

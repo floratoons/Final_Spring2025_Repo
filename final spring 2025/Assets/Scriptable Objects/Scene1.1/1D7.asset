@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 1D7
   m_EditorClassIdentifier: 
   speakerName: Random Man
+  sceneSectionNum: 1
   dialogueLinesList:
   - "\u201CHave you heard about the whole\u2026 Jenna Caplan thing?\u201D"
   nextLine: {fileID: 0}

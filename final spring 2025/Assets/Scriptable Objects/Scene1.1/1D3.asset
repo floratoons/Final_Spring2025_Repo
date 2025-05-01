@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 1D3
   m_EditorClassIdentifier: 
   speakerName: Random Man
+  sceneSectionNum: 1
   dialogueLinesList:
   - "\u201CNice day out, isn\u2019t it? I was surprised! It\u2019s much brighter
     than it is in all those videos\u2026 Guess people film spooky b-roll on purpose,

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 1D7A.2
   m_EditorClassIdentifier: 
   speakerName: Random Man
+  sceneSectionNum: 1
   dialogueLinesList:
   - "\u201COf course you have, what am I even saying? So like, have you seen any
     ghosts?\u201D"

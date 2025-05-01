@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 1D7B.2
   m_EditorClassIdentifier: 
   speakerName: Random Man
+  sceneSectionNum: 1
   dialogueLinesList:
   - "\u201COh, wow, seriously? But you live here? Wow! "
   - "Well, just make sure you\u2019re watching out, there\u2019s some spooky stuff

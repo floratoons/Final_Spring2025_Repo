@@ -9,13 +9,30 @@ using UnityEngine;
 public class DialogueLine : ScriptableObject
 {
     public string speakerName;
-    
+    // keeps track of which scene section for which character portraits are on
+    public int sceneSectionNum;
+
     [TextArea] public List<string> dialogueLinesList = new List<string>();
     // list of text to show
     // next line if there are no choices
     public DialogueLine nextLine;
     // choices
     public DialogueChoice[] choices;
+
+    DialogueManager DialogueManagerScript;
+
+    private void OnEnable()
+    {
+        //Debug.Log(${GameObject});
+        // checking the scene section for which character portraits are on
+        /*DialogueManagerScript = GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>();
+
+        // if the scene section changes, update (characterportraitupdate)
+        if (sceneSectionNum != DialogueManagerScript.currentSceneSectionNum)
+        {
+            DialogueManagerScript.CharacterPortraitUpdate(sceneSectionNum);
+        }*/
+    }
 
 }
 

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 1D7B.1
   m_EditorClassIdentifier: 
   speakerName: Io
+  sceneSectionNum: 1
   dialogueLinesList:
   - '"No, not really."'
   nextLine: {fileID: 11400000, guid: 804c5240d1b0c0c40a84798a1419d8d1, type: 2}

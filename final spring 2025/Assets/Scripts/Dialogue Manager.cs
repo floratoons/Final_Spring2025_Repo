@@ -8,6 +8,12 @@ public class DialogueManager : MonoBehaviour
 {
     // reference to our scriptable object
     public DialogueLine currentLine;
+
+    // scene (reference to characters active in "scene" section)
+    public int currentSceneSectionNum = 0;
+    // all parents of character portraits
+    public List<GameObject> sceneMemberHolders = new List<GameObject>();
+
     // container for dialogue lines
     public Transform dialogueParent;
     public GameObject dialoguePrefab;
@@ -15,13 +21,56 @@ public class DialogueManager : MonoBehaviour
     public GameObject choiceButtonPrefab;
     // container for our button choices
     public Transform choiceParent;
-    public Button continueButton; 
-
-    // npc portraits & movement?
+    public Button continueButton;
 
     public void StartingDialogue()
     {
         UpdateDialogue(currentLine);
+    }
+
+    public void CharacterPortraitUpdate(int newScene)
+    {
+        // depending on what the new scene is, update the images to be enabled or disabled
+        if (newScene == 0)
+        {
+            /*
+            sceneMemberHolders[].SetActive(false);
+            sceneMemberHolders[newScene].SetActive(true); 
+            currentSceneSectionNum = newScene;
+            */
+            sceneMemberHolders[0].SetActive(true);
+            sceneMemberHolders[1].SetActive(false);
+            sceneMemberHolders[2].SetActive(false);
+            sceneMemberHolders[3].SetActive(false);
+
+            currentSceneSectionNum = 0;
+        }
+        else if (newScene == 1)
+        {
+            Debug.Log($"Switched to scene section {newScene}.");
+
+            sceneMemberHolders[0].SetActive(false);
+            sceneMemberHolders[1].SetActive(true);
+            sceneMemberHolders[2].SetActive(false);
+            sceneMemberHolders[3].SetActive(false);
+            currentSceneSectionNum = 1;
+        }
+        else if (newScene == 2)
+        {
+            sceneMemberHolders[0].SetActive(false);
+            sceneMemberHolders[1].SetActive(false);
+            sceneMemberHolders[2].SetActive(true);
+            sceneMemberHolders[3].SetActive(false);
+            currentSceneSectionNum = 2;
+        }
+        else if (newScene == 3)
+        {
+            sceneMemberHolders[0].SetActive(false);
+            sceneMemberHolders[1].SetActive(false);
+            sceneMemberHolders[2].SetActive(false);
+            sceneMemberHolders[3].SetActive(true);
+            currentSceneSectionNum = 3;
+        }
     }
 
     public void UpdateDialogue(DialogueLine dialogueLine)
@@ -40,6 +89,7 @@ public class DialogueManager : MonoBehaviour
 
             // make a new copy of a button
             GameObject textBubble = Instantiate(dialoguePrefab, dialogueParent);
+            CharacterPortraitUpdate(currentLine.sceneSectionNum);
             TextMeshProUGUI grabText = textBubble.GetComponent<TextMeshProUGUI>();
             // set the text to whatever string we're currently looping
             grabText.text = _dialogueLine;

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 1D7A.4
   m_EditorClassIdentifier: 
   speakerName: Random Man
+  sceneSectionNum: 1
   dialogueLinesList:
   - "\u201CRight, right, well, I guess sightings are pretty rare if you don\u2019t
     have the right equipment. "

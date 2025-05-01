@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 1D7A.3
   m_EditorClassIdentifier: 
   speakerName: Io
+  sceneSectionNum: 1
   dialogueLinesList:
   - '"No, I haven''t."'
   nextLine: {fileID: 11400000, guid: 0f4351893ed2d894080988aafa8a64fb, type: 2}

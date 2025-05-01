@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 1D1(Intro)
   m_EditorClassIdentifier: 
   speakerName: Io
+  sceneSectionNum: 0
   dialogueLinesList:
   - "Ah, you fell asleep again. It\u2019s okay, it\u2019s just you in here. Not like
     you have a manager or anything to get on you for sleeping on the job. Not like

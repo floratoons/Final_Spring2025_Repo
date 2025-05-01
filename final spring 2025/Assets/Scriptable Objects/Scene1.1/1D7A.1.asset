@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 1D7A.1
   m_EditorClassIdentifier: 
   speakerName: Io
+  sceneSectionNum: 1
   dialogueLinesList:
   - '"Yeah."'
   nextLine: {fileID: 11400000, guid: 0c403cfe4ce0cc14eb2b021db42ae1bd, type: 2}

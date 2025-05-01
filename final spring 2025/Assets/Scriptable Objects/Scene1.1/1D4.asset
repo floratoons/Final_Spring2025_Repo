@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 1D4
   m_EditorClassIdentifier: 
   speakerName: Io
+  sceneSectionNum: 1
   dialogueLinesList:
   - "Ugh. Tourists. It\u2019s not even that nice out. Could be nicer. The wind off
     of the bay makes Flanagan\u2019s Point cold all the time. You don\u2019t know

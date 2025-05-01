@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 1D6
   m_EditorClassIdentifier: 
   speakerName: Io
+  sceneSectionNum: 1
   dialogueLinesList:
   - "Definitely another tourist. Ugh, look at the \u201Cghost hunting\u201D stuff.
     So weird, treating that accident like it\u2019s just a story.\r"
