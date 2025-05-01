@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
-  m_Name: 2D16B.5
+  m_Name: 3D8 (End scene logic)
   m_EditorClassIdentifier: 
-  speakerName: Io
-  sceneSectionNum: 2
+  speakerName: 
+  sceneSectionNum: 0
   dialogueLinesList:
-  - "\u201COkay, get out of here, Stella! Take a soda or something.\u201D"
-  nextLine: {fileID: 11400000, guid: 6af5e741992b13248aa2113689bfc2c0, type: 2}
+  - Contemplating the events of the scene LOL
+  nextLine: {fileID: 0}
   choices: []

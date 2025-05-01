@@ -21,7 +21,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject choiceButtonPrefab;
     // container for our button choices
     public Transform choiceParent;
-    public Button continueButton;
+    public GameObject continueButton;
 
     public void StartingDialogue()
     {
@@ -41,7 +41,7 @@ public class DialogueManager : MonoBehaviour
             if (i == newScene)
             {
                 sceneMemberHolders[i].SetActive(true);
-                Debug.Log($"Switched to scene section {newScene}.");
+                //Debug.Log($"Switched to scene section {newScene}.");
                 // animations?
             }
             // for the inactive scenememberholders
@@ -123,9 +123,7 @@ public class DialogueManager : MonoBehaviour
         // clear all the old choice buttons
         foreach (Transform _child in choiceParent) Destroy(_child.gameObject);
         // hide the continue button on default
-        continueButton.gameObject.GetComponent<Button>().interactable = false;
         continueButton.gameObject.GetComponent<Image>().color = Color.grey;
-        // SetActive(false);
         // button choices appear after the latest chat line
         choiceParent.transform.SetAsLastSibling();
 
@@ -175,32 +173,37 @@ public class DialogueManager : MonoBehaviour
         }
         else if (line.nextLine != null)
         {
-            // if there are no dialogue choices, show the continue button
-            continueButton.gameObject.GetComponent<Button>().interactable = true;
+            Debug.Log("line.nextLine != null");
+            // if there are no dialogue choices & just a next line, allow the continue button
             continueButton.gameObject.GetComponent<Image>().color = Color.white;
-            // clear everything
-            // using the same button for different lines
-            // so we don't want the previous dialogue lines to stack over each other
-            continueButton.onClick.RemoveAllListeners();
-                // when the button is clicked, run the code and it'll continue to the next line
-                continueButton.onClick.AddListener(() =>
-                {
-                    UpdateDialogue(line.nextLine);
-                    continueButton.gameObject.GetComponent<Button>().interactable = false;
-                    continueButton.gameObject.GetComponent<Image>().color = Color.grey;
-                });
-        }
 
+            /*if (Input.GetKey(KeyCode.Space))
+            {
+                Debug.Log("Space button clicked for next line");
+                UpdateDialogue(line.nextLine);
+                continueButton.gameObject.GetComponent<Image>().color = Color.grey;
+            }*/
+
+            UpdateDialogue(line.nextLine);
+            Debug.Log("Next line");
+
+        }
     }
 
-    /*int GetPlayerStatValue(string StatName)
+    /*public void continueSpace()
     {
-        switch (StatName)
-        {
-            case "charisma": return PlayerStats.Instance.charisma;
-            case "logic": return PlayerStats.Instance.logic;
-                default: return 0;
-        }
+        Debug.Log("Next line");
+        UpdateDialogue(line.nextLine);
+        continueButton.gameObject.GetComponent<Image>().color = Color.grey;
     }*/
 
+        /*int GetPlayerStatValue(string StatName)
+        {
+            switch (StatName)
+            {
+                case "charisma": return PlayerStats.Instance.charisma;
+                case "logic": return PlayerStats.Instance.logic;
+                    default: return 0;
+            }
+        }*/
 }
