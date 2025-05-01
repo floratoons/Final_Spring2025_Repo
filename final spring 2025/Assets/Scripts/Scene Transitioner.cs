@@ -12,6 +12,8 @@ public class SceneTransitioner : MonoBehaviour
 
     public Button homeButton, wharfButton, workButton;
 
+    private int activeLocation;
+
     public float speed = 1.0f;
     public Camera cam;
     public Canvas menuCanvas;
@@ -49,6 +51,8 @@ public class SceneTransitioner : MonoBehaviour
 
                 GMScript.menu.enabled = false;
                 //add smoothness to transition
+
+                //activeLocation = sceneLocations[i];
 
             });
         }

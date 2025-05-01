@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 2D13
+  m_EditorClassIdentifier: 
+  speakerName: Io
+  sceneSectionNum: 2
+  dialogueLinesList:
+  - "\u201CThat sounds wonderful, Stella.\u201D"
+  - "She\u2019s rolling her eyes at you. You give her a halfhearted smile as an apology."
+  - "You don\u2019t really mean to be so prickly."
+  nextLine: {fileID: 11400000, guid: 8f19e273611de06469e020f33815f0c6, type: 2}
+  choices: []

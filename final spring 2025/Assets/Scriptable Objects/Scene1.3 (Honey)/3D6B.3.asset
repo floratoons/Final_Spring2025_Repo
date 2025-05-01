@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 3D6B.3
+  m_EditorClassIdentifier: 
+  speakerName: Io
+  sceneSectionNum: 3
+  dialogueLinesList:
+  - "\u201CKind of..? Recently, I guess. California is cool. I mean\u2013 Is it cool\u2026
+    there?\u201D"
+  nextLine: {fileID: 11400000, guid: 1ff2a5fbc07b16b419d29966166d0af1, type: 2}
+  choices: []

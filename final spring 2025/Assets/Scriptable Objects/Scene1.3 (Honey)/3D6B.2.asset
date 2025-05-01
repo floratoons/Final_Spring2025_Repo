@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 3D6B.2
+  m_EditorClassIdentifier: 
+  speakerName: '?'
+  sceneSectionNum: 3
+  dialogueLinesList:
+  - "\u201COh! Is it super obvious that I\u2019m from out of town? Haha, it would
+    be, wouldn\u2019t it? I\u2019m here from California."
+  - "I\u2019ve had, like, some time to travel lately."
+  - "Is this place pretty close-knit?\u201D"
+  nextLine: {fileID: 11400000, guid: d64f4b993eaa4d04f92dcb54e9884edb, type: 2}
+  choices: []

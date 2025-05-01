@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     MusicManager MMScript;
     ButtonManager BMScript;
+    SceneTransitioner STScript;
 
     public Canvas menu;
     private SpriteRenderer notebook;
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         MMScript = GameObject.Find("MM").GetComponent<MusicManager>();
+        STScript = GameObject.Find("Camera").GetComponent<SceneTransitioner>();
 
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {

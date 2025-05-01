@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 3D6B.4
+  m_EditorClassIdentifier: 
+  speakerName: '?'
+  sceneSectionNum: 3
+  dialogueLinesList:
+  - "\u201CSure it is! Not so many ghosts, though. The East coast is way spookier."
+  - "Mm, but you probably aren\u2019t into that kind of thing just because you live
+    here, huh?\u201D"
+  nextLine: {fileID: 11400000, guid: 64f510e52587fac428c4a6569bc5e198, type: 2}
+  choices: []

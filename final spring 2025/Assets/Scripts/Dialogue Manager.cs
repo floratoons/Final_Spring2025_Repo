@@ -41,6 +41,8 @@ public class DialogueManager : MonoBehaviour
             if (i == newScene)
             {
                 sceneMemberHolders[i].SetActive(true);
+                Debug.Log($"Switched to scene section {newScene}.");
+                // animations?
             }
             // for the inactive scenememberholders
             else if (i != newScene)

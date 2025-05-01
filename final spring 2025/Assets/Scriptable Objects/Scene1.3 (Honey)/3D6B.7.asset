@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 3D6B.7
+  m_EditorClassIdentifier: 
+  speakerName: '?'
+  sceneSectionNum: 3
+  dialogueLinesList:
+  - "\r\u201CWhoah, so you\u2019re totally not scared. That\u2019s cool. I mean,
+    I\u2019ve been doing this for a while, and I\u2019m still kind of scared of the
+    really haunted places."
+  - "Even though that\u2019s, like, my job now, haha.\u201D"
+  nextLine: {fileID: 11400000, guid: f287af8a18679844183740bb0cf2dbf0, type: 2}
+  choices: []

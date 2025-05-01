@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 3D6A.7 (Add stat reward)
+  m_EditorClassIdentifier: 
+  speakerName: Honey
+  sceneSectionNum: 3
+  dialogueLinesList:
+  - "\u201COh! That\u2019s okay! I\u2019m gonna be down at the wharf for a while,
+    so\u2026 maybe we\u2019ll run into each other?"
+  - "I\u2019m Honey, by the way. So you can yell at me if you see me!\u201D"
+  - '** Add memory(stat reward)'
+  nextLine: {fileID: 11400000, guid: 95a884249a56a0e4e96706089dcfb647, type: 2}
+  choices: []

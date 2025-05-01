@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 3D6B.10
+  m_EditorClassIdentifier: 
+  speakerName: 
+  sceneSectionNum: 3
+  dialogueLinesList:
+  - '''East Coast-ie ghost-ies...'''
+  - "Oh, indeed. She\u2019s another one of the ghost hunting tourists. There\u2019s
+    something about that fact that irks you, but\u2026"
+  - "there\u2019s something else about her. She seems fun. Maybe a bit loud. You
+    hand her her coffee, and she smiles at you, and you feel your face get a little
+    warm."
+  - Definitely something about her.
+  nextLine: {fileID: 11400000, guid: da8c7b47eb5e70349972840c10ec2c67, type: 2}
+  choices: []
