@@ -31,18 +31,33 @@ public class DialogueManager : MonoBehaviour
     public void CharacterPortraitUpdate(int newScene)
     {
         // depending on what the new scene is, update the images to be enabled or disabled
-        if (newScene == 0)
+
+        // cycle through the sceneMemberHolders list for all the scene section parents
+        // simplified version LETSGOOOOOOOOOO
+        
+        for (int i = 0; i < sceneMemberHolders.Count; i++)
         {
-            /*
-            sceneMemberHolders[].SetActive(false);
-            sceneMemberHolders[newScene].SetActive(true); 
-            currentSceneSectionNum = newScene;
-            */
+            // for the 1 active scenememberholder
+            if (i == newScene)
+            {
+                sceneMemberHolders[i].SetActive(true);
+            }
+            // for the inactive scenememberholders
+            else if (i != newScene)
+            {
+                sceneMemberHolders[i].SetActive(false);
+            }
+        }
+        currentSceneSectionNum = newScene;
+
+        /*if (newScene == 0)
+        {
+            Debug.Log($"Switched to scene section {newScene}.");
+
             sceneMemberHolders[0].SetActive(true);
             sceneMemberHolders[1].SetActive(false);
             sceneMemberHolders[2].SetActive(false);
             sceneMemberHolders[3].SetActive(false);
-
             currentSceneSectionNum = 0;
         }
         else if (newScene == 1)
@@ -70,7 +85,7 @@ public class DialogueManager : MonoBehaviour
             sceneMemberHolders[2].SetActive(false);
             sceneMemberHolders[3].SetActive(true);
             currentSceneSectionNum = 3;
-        }
+        }*/
     }
 
     public void UpdateDialogue(DialogueLine dialogueLine)
