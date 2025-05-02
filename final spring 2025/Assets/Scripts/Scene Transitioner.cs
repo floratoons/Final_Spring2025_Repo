@@ -35,8 +35,15 @@ public class SceneTransitioner : MonoBehaviour
         {
             //when canvas is up & button clicked -> move to vector3 -> based on which button
             sceneTrans(sceneLocations[1], homeButton);
+            GMScript.dialoguecanvas.enabled = true;
+            // start a new Chapter
             sceneTrans(sceneLocations[2], wharfButton);
+            GMScript.dialoguecanvas.enabled = true;
+            // start a new Chapter
             sceneTrans(sceneLocations[3], workButton);
+            GMScript.dialoguecanvas.enabled = true;
+            // start a new Chapter
+
         }
     }
 

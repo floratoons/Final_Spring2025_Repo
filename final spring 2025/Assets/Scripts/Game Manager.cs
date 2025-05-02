@@ -9,10 +9,16 @@ public class GameManager : MonoBehaviour
     MusicManager MMScript;
     ButtonManager BMScript;
     SceneTransitioner STScript;
+    DialogueManager DMScript;
 
     public Canvas menu;
     private SpriteRenderer notebook;
-    private Canvas dialoguecanvas;
+    public Canvas dialoguecanvas;
+
+    // chapters
+    // keep track of what the last "currentline" from dialogue manager 
+
+
 
     void Awake()
     {
@@ -30,6 +36,7 @@ public class GameManager : MonoBehaviour
     {
         MMScript = GameObject.Find("MM").GetComponent<MusicManager>();
         STScript = GameObject.Find("Camera").GetComponent<SceneTransitioner>();
+        DMScript = GameObject.Find("Dialogue Manager").GetComponent < DialogueManager>();
 
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
