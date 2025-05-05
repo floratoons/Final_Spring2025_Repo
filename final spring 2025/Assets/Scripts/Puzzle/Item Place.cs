@@ -56,8 +56,6 @@ public class ItemPlace : MonoBehaviour
                 //FindWithTag("Gem");
             }
         }
-        
-        
     }
 
     private void OnTriggerExit(Collider other)

@@ -123,6 +123,7 @@ public class DialogueManager : MonoBehaviour
         // clear all the old choice buttons
         foreach (Transform _child in choiceParent) Destroy(_child.gameObject);
         // hide the continue button on default
+        continueButton.gameObject.GetComponent<Button>().interactable = false;
         continueButton.gameObject.GetComponent<Image>().color = Color.grey;
         // button choices appear after the latest chat line
         choiceParent.transform.SetAsLastSibling();
@@ -175,7 +176,14 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.Log("line.nextLine != null");
             // if there are no dialogue choices & just a next line, allow the continue button
+            continueButton.gameObject.GetComponent<Button>().interactable = true;
             continueButton.gameObject.GetComponent<Image>().color = Color.white;
+
+            continueButton.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                UpdateDialogue(line.nextLine);
+                Debug.Log("Next line");
+            });
 
             /*if (Input.GetKey(KeyCode.Space))
             {
@@ -183,10 +191,6 @@ public class DialogueManager : MonoBehaviour
                 UpdateDialogue(line.nextLine);
                 continueButton.gameObject.GetComponent<Image>().color = Color.grey;
             }*/
-
-            UpdateDialogue(line.nextLine);
-            Debug.Log("Next line");
-
         }
     }
 

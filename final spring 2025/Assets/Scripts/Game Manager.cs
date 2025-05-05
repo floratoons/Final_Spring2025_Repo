@@ -12,11 +12,14 @@ public class GameManager : MonoBehaviour
     DialogueManager DMScript;
 
     public Canvas menu;
-    private SpriteRenderer notebook;
     public Canvas dialoguecanvas;
+    public Canvas wincanvas;
+    Image menubutton;
 
-    // chapters
-    // keep track of what the last "currentline" from dialogue manager 
+    // chapters:
+    // last "currentline" from dialogue manager for the last dialogue line read
+    // last "currentchapter" for the last chapter (all dialoguesections in a location in a day) finished
+    // 
 
 
 
@@ -55,29 +58,42 @@ public class GameManager : MonoBehaviour
         {
             MMScript.MusicWater();
 
-            // find the menu
+            // find the menu, button & win note
+            menubutton = GameObject.Find("1menubutton").GetComponent<Image>();
             menu = GameObject.FindWithTag("Menu").GetComponent<Canvas>();
-            notebook = GameObject.Find("Notebook").GetComponent<SpriteRenderer>();
+            wincanvas = GameObject.Find("WinCanvas").GetComponent<Canvas>();
         }
 
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
+        if (SceneManager.GetActiveScene().buildIndex == 1)
         {
-            menu.enabled = true;
-            if (SceneManager.GetActiveScene().buildIndex == 1)
+            if (Input.GetKeyDown(KeyCode.M))
             {
+                menu.enabled = true;
                 dialoguecanvas.enabled = false;
             }
-        }
-        if (menu == true && Input.GetKey(KeyCode.Escape))
-        {
-            menu.enabled = false;
-            if (SceneManager.GetActiveScene().buildIndex == 1)
+            if (menu == true && Input.GetKey(KeyCode.Escape))
             {
+                menu.enabled = false;
                 dialoguecanvas.enabled = true;
+            }
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                menubutton.enabled = false;
+                menu.enabled = true;
+            }
+            
+            if (menu == true && Input.GetKey(KeyCode.Escape))
+            {
+                menubutton.enabled = true;
+                menu.enabled = false;
             }
         }
     }
