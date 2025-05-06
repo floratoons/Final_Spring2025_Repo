@@ -14,7 +14,14 @@ public class GameManager : MonoBehaviour
     public Canvas menu;
     public Canvas dialoguecanvas;
     public Canvas wincanvas;
-    Image menubutton;
+    public Image menubutton;
+
+    // puzzle game
+
+    GameObject red;
+    GameObject blue;
+    GameObject purple;
+
 
     // chapters:
     // last "currentline" from dialogue manager for the last dialogue line read
@@ -38,8 +45,13 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         MMScript = GameObject.Find("MM").GetComponent<MusicManager>();
-        STScript = GameObject.Find("Camera").GetComponent<SceneTransitioner>();
         DMScript = GameObject.Find("Dialogue Manager").GetComponent < DialogueManager>();
+
+        /*red1 = GameObject.Find("Red1");
+        red2 = GameObject.Find("Red2");
+        blue1 = GameObject.Find("Blue1");
+        blue1 = GameObject.Find("Blue2");
+        purple = GameObject.Find("Purple");*/
 
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
@@ -50,18 +62,19 @@ public class GameManager : MonoBehaviour
         {
             MMScript.MusicAbstract();
 
+            Cursor.lockState = CursorLockMode.None;
+
             // find the menu & notebook 
             menu = GameObject.FindWithTag("Menu").GetComponent<Canvas>();
             dialoguecanvas = GameObject.Find("DialogueBox").GetComponent<Canvas>();
+
+            STScript = GameObject.Find("Camera").GetComponent<SceneTransitioner>();
         }
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             MMScript.MusicWater();
 
             // find the menu, button & win note
-            menubutton = GameObject.Find("1menubutton").GetComponent<Image>();
-            menu = GameObject.FindWithTag("Menu").GetComponent<Canvas>();
-            wincanvas = GameObject.Find("WinCanvas").GetComponent<Canvas>();
         }
 
     }

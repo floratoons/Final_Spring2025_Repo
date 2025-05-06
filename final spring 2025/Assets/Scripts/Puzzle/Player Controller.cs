@@ -21,10 +21,10 @@ public class CharacterPlayer : MonoBehaviour
     public bool onGround;
     public bool isJumping = false;
 
-    public bool isWalking = false;
+    /*public bool isWalking = false;
     public bool isClimbing = false;
     public bool isIdle = true;
-    Animator playerAnim;
+    Animator playerAnim;*/
 
     // tracking camera vertical and horizontal movement
     private float yRotation = 0;
@@ -38,7 +38,7 @@ public class CharacterPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerAnim = GameObject.Find("PlayerCharacter").GetComponent<Animator>();
+        //playerAnim = GameObject.Find("PlayerCharacter").GetComponent<Animator>();
 
         Time.timeScale = 1f;
         controller = GetComponent<CharacterController>();
@@ -73,6 +73,10 @@ public class CharacterPlayer : MonoBehaviour
         {
             transform.position = new Vector3(1,-12,-4);
         }
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 
     private void PlayerFollow()
@@ -104,14 +108,14 @@ public class CharacterPlayer : MonoBehaviour
             + (transform.right * horizontalInput * walkSpeed)
             + (Vector3.up * velocity.y);
        
-        if (depthInput != 0 || horizontalInput != 0)
+        /*if (depthInput != 0 || horizontalInput != 0)
         {
             playerAnim.SetBool("isWalking", true);
         }
         else
         {
             playerAnim.SetBool("isWalking", false);
-        }
+        }*/
 
     }
     

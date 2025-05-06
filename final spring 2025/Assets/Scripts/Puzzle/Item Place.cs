@@ -9,6 +9,8 @@ public class ItemPlace : MonoBehaviour
     public int pedestalNumber;
     public Transform placeSpot1;
     public Transform placeSpot2;
+    Vector3 scale1;
+    Vector3 scale2;
 
     public Transform staticPlaceSpot;
     public bool itemPlaced = false;
@@ -20,6 +22,9 @@ public class ItemPlace : MonoBehaviour
     private void Start()
     {
         ItemManagerScript = GameObject.Find("Player").GetComponent<ItemManager>();
+
+        scale1 = new Vector3((float)0.5, (float)2.5, (float)0.75);
+        scale2 = new Vector3((float)3, (float)12, (float)3.5);
 
         if (pedestalNumber == 1)
         {
@@ -42,8 +47,6 @@ public class ItemPlace : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("Gem in area");
-        
         if (itemPlaced)
         {
             if (other.CompareTag("Gem"))
@@ -70,12 +73,17 @@ public class ItemPlace : MonoBehaviour
     void Update()
     {
         {
-            if (this.gameObject.activeInHierarchy && Input.GetMouseButtonDown(0) && inArea)
+            if (this.gameObject.activeInHierarchy && Input.GetMouseButtonDown(0) && inArea && pedestalNumber == 1)
             {
                 itemPlaced = true;
                 //place the object on a spot
-                ItemManagerScript.placeInSpot(staticPlaceSpot);
-
+                ItemManagerScript.placeInSpot(staticPlaceSpot, scale1);
+            }
+            else if(this.gameObject.activeInHierarchy && Input.GetMouseButtonDown(0) && inArea && pedestalNumber == 2)
+            {
+                itemPlaced = true;
+                //place the object on a spot
+                ItemManagerScript.placeInSpot(staticPlaceSpot, scale2);
             }
         }
     }

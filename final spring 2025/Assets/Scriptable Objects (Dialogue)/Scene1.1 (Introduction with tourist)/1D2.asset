@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 1D2
   m_EditorClassIdentifier: 
   speakerName: Io
+  sceneSectionNum: 0
   dialogueLinesList:
-  - "Thought too soon. Damn it.\r"
-  - "Maybe you should be drinking coffee, or something. Then you wouldn\u2019t have
-    so many strange dreams.\r"
+  - "Thought too soon. Damn it.\nMaybe you should be drinking coffee, or something.
+    Then you wouldn\u2019t have so many strange dreams.\r"
   nextLine: {fileID: 11400000, guid: c5ac8dcb8c8a26f428d4dcf10533b816, type: 2}
   choices: []

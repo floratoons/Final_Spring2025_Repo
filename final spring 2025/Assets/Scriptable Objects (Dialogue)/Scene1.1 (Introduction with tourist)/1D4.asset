@@ -17,7 +17,7 @@ MonoBehaviour:
   dialogueLinesList:
   - "Ugh. Tourists. It\u2019s not even that nice out. Could be nicer. The wind off
     of the bay makes Flanagan\u2019s Point cold all the time. You don\u2019t know
-    why anyone would choose to come here to pretend to see some stupid ghosts.\r"
-  - "\r\u201CSure, I guess. It\u2019s 17.89, cash or card?\u201D"
+    why anyone would choose to come here to pretend to see some stupid ghosts.\n\r\u201CSure,
+    I guess. It\u2019s 17.89, cash or card?\u201D\r"
   nextLine: {fileID: 11400000, guid: 8267286227afd964e8f66f08336117d1, type: 2}
   choices: []

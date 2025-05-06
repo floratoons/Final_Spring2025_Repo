@@ -34,7 +34,7 @@ public class DialogueManager : MonoBehaviour
 
         // cycle through the sceneMemberHolders list for all the scene section parents
         // simplified version LETSGOOOOOOOOOO
-        
+
         for (int i = 0; i < sceneMemberHolders.Count; i++)
         {
             // for the 1 active scenememberholder
@@ -51,51 +51,16 @@ public class DialogueManager : MonoBehaviour
             }
         }
         currentSceneSectionNum = newScene;
-
-        /*if (newScene == 0)
-        {
-            Debug.Log($"Switched to scene section {newScene}.");
-
-            sceneMemberHolders[0].SetActive(true);
-            sceneMemberHolders[1].SetActive(false);
-            sceneMemberHolders[2].SetActive(false);
-            sceneMemberHolders[3].SetActive(false);
-            currentSceneSectionNum = 0;
-        }
-        else if (newScene == 1)
-        {
-            Debug.Log($"Switched to scene section {newScene}.");
-
-            sceneMemberHolders[0].SetActive(false);
-            sceneMemberHolders[1].SetActive(true);
-            sceneMemberHolders[2].SetActive(false);
-            sceneMemberHolders[3].SetActive(false);
-            currentSceneSectionNum = 1;
-        }
-        else if (newScene == 2)
-        {
-            sceneMemberHolders[0].SetActive(false);
-            sceneMemberHolders[1].SetActive(false);
-            sceneMemberHolders[2].SetActive(true);
-            sceneMemberHolders[3].SetActive(false);
-            currentSceneSectionNum = 2;
-        }
-        else if (newScene == 3)
-        {
-            sceneMemberHolders[0].SetActive(false);
-            sceneMemberHolders[1].SetActive(false);
-            sceneMemberHolders[2].SetActive(false);
-            sceneMemberHolders[3].SetActive(true);
-            currentSceneSectionNum = 3;
-        }*/
     }
 
     public void UpdateDialogue(DialogueLine dialogueLine)
     {
         currentLine = dialogueLine;
         StartCoroutine(DisplayDialogue(currentLine));
-    }
 
+
+
+    }
 
     IEnumerator DisplayDialogue(DialogueLine line)
     {
@@ -106,6 +71,9 @@ public class DialogueManager : MonoBehaviour
 
             // make a new copy of a button
             GameObject textBubble = Instantiate(dialoguePrefab, dialogueParent);
+
+            //dialoguePrefab.transform.SetAsLastSibling();
+
             CharacterPortraitUpdate(currentLine.sceneSectionNum);
             TextMeshProUGUI grabText = textBubble.GetComponent<TextMeshProUGUI>();
             // set the text to whatever string we're currently looping
@@ -179,27 +147,44 @@ public class DialogueManager : MonoBehaviour
             continueButton.gameObject.GetComponent<Button>().interactable = true;
             continueButton.gameObject.GetComponent<Image>().color = Color.white;
 
-            continueButton.GetComponent<Button>().onClick.AddListener(() =>
+            /*continueButton.GetComponent<Button>().onClick.AddListener(() =>
             {
                 UpdateDialogue(line.nextLine);
                 Debug.Log("Next line");
-            });
+            });*/
 
-            /*if (Input.GetKey(KeyCode.Space))
+            // waitforkeypresses
+            //StartCoroutine(WaitForSpace());
+
+            for (int i = 0; i < 5; i++)
             {
-                Debug.Log("Space button clicked for next line");
+                while (!Input.GetKeyDown(KeyCode.Space))
+                {
+                    yield return null;  //wait till next frame
+                }
+                Debug.Log($"Pressed space; i == {i}");
+
                 UpdateDialogue(line.nextLine);
-                continueButton.gameObject.GetComponent<Image>().color = Color.grey;
-            }*/
+                yield return null;
+            }
+
         }
     }
 
-    /*public void continueSpace()
+    IEnumerator WaitForSpace()
     {
-        Debug.Log("Next line");
-        UpdateDialogue(line.nextLine);
-        continueButton.gameObject.GetComponent<Image>().color = Color.grey;
-    }*/
+        for (int i = 0; i < 5; i++)
+        {
+            while (!Input.GetKeyDown(KeyCode.Space))
+            {
+                yield return null;  //wait till next frame
+            }
+            Debug.Log($"Pressed space; i == {i}");
+
+            yield return null;
+        }
+    }
+}
 
         /*int GetPlayerStatValue(string StatName)
         {
@@ -210,4 +195,3 @@ public class DialogueManager : MonoBehaviour
                     default: return 0;
             }
         }*/
-}
