@@ -57,9 +57,6 @@ public class DialogueManager : MonoBehaviour
     {
         currentLine = dialogueLine;
         StartCoroutine(DisplayDialogue(currentLine));
-
-
-
     }
 
     IEnumerator DisplayDialogue(DialogueLine line)
@@ -171,6 +168,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    /*
     IEnumerator WaitForSpace()
     {
         for (int i = 0; i < 5; i++)
@@ -183,8 +181,7 @@ public class DialogueManager : MonoBehaviour
 
             yield return null;
         }
-    }
-}
+    }*/
 
         /*int GetPlayerStatValue(string StatName)
         {
@@ -195,3 +192,6 @@ public class DialogueManager : MonoBehaviour
                     default: return 0;
             }
         }*/
+
+}
+
