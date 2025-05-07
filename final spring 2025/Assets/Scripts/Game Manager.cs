@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     ButtonManager BMScript;
     SceneTransitioner STScript;
     DialogueManager DMScript;
+    CameraShift cameraScript;
 
     public Canvas menu;
     public Canvas dialoguecanvas;
@@ -18,9 +19,13 @@ public class GameManager : MonoBehaviour
 
     // puzzle game
 
-    GameObject red;
-    GameObject blue;
-    GameObject purple;
+    public GameObject red;
+    public GameObject blue;
+    public GameObject purple;
+
+    public GameObject clue;
+
+    //bool solvedPuzzle1 = false;
 
 
     // chapters:
@@ -47,12 +52,6 @@ public class GameManager : MonoBehaviour
         MMScript = GameObject.Find("MM").GetComponent<MusicManager>();
         DMScript = GameObject.Find("Dialogue Manager").GetComponent < DialogueManager>();
 
-        /*red1 = GameObject.Find("Red1");
-        red2 = GameObject.Find("Red2");
-        blue1 = GameObject.Find("Blue1");
-        blue1 = GameObject.Find("Blue2");
-        purple = GameObject.Find("Purple");*/
-
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
             MMScript.MusicTadpole();
@@ -69,6 +68,7 @@ public class GameManager : MonoBehaviour
             dialoguecanvas = GameObject.Find("DialogueBox").GetComponent<Canvas>();
 
             STScript = GameObject.Find("Camera").GetComponent<SceneTransitioner>();
+            cameraScript = GameObject.Find("Fade").GetComponent<CameraShift>();
         }
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
@@ -76,7 +76,6 @@ public class GameManager : MonoBehaviour
 
             // find the menu, button & win note
         }
-
     }
 
     private void Update()
@@ -110,5 +109,19 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+
+    public void puzzleSolve()
+    {
+        //StartCoroutine(cameraScript.cameraSwitch(birdsEyeCam));
+
+        purple.SetActive(true);
+        clue.SetActive(true);
+
+        //solvedPuzzle1 = true;
+    }
+
+    
+
 
 }

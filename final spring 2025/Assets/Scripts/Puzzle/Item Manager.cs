@@ -8,8 +8,9 @@ public class ItemManager : MonoBehaviour
     public List<GameObject> gemList = new List<GameObject>();
 
     public List<GameObject> placedList = new List<GameObject>();
-    private bool hasBlue = false;
-    private bool hasRed = false;
+    //private bool hasBlue = false;
+    //private bool hasRed = false;
+    //private bool solved = false;
 
     // index to track currently active gem
     private int currentGemIndex = -1; // start with no gem
@@ -17,13 +18,15 @@ public class ItemManager : MonoBehaviour
     private float scrollInput;
     //private int scrollCountTest;
 
-    ItemPlace ItemPlaceScript;
-    ItemPickup ItemPickupScript;
+    ItemPlace IPlaceScript;
+    ItemPickup IPickupScript;
+    GameManager GMScript;
 
     private void Start()
     {
-        ItemPlaceScript = GameObject.FindWithTag("Ped").GetComponent<ItemPlace>();
-        ItemPickupScript = GameObject.FindWithTag("Gem").GetComponent<ItemPickup>();
+        IPlaceScript = GameObject.FindWithTag("Ped").GetComponent<ItemPlace>();
+        IPickupScript = GameObject.FindWithTag("Gem").GetComponent<ItemPickup>();
+        GMScript = GameObject.Find("GM").GetComponent<GameManager>();
 
     }
 
@@ -105,8 +108,9 @@ public class ItemManager : MonoBehaviour
 
         // ** remove gem from the list?
 
-        gemList.Remove(ItemPlaceScript.placedGem);
-        placedList.Add(ItemPlaceScript.placedGem);
+        placedList.Add(gemList[currentGemIndex]);
+        gemList.Remove(gemList[currentGemIndex]);
+        
 
         /*if (placedList.Count == 2)
         {
@@ -124,6 +128,13 @@ public class ItemManager : MonoBehaviour
                 {
                     hasRed = true;
                     Debug.Log("Red placed");
+                }
+                if (hasRed && hasBlue)
+                {
+                    Debug.Log("Placed blue & red!");
+                    solved = true;
+
+
                 }
             }
         }*/
