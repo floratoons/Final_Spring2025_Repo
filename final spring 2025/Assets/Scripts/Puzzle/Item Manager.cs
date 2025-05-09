@@ -8,9 +8,9 @@ public class ItemManager : MonoBehaviour
     public List<GameObject> gemList = new List<GameObject>();
 
     public List<GameObject> placedList = new List<GameObject>();
-    //private bool hasBlue = false;
-    //private bool hasRed = false;
-    //private bool solved = false;
+    private bool hasBlue = false;
+    private bool hasRed = false;
+    private bool solved = false;
 
     // index to track currently active gem
     private int currentGemIndex = -1; // start with no gem
@@ -22,44 +22,44 @@ public class ItemManager : MonoBehaviour
     ItemPickup IPickupScript;
     GameManager GMScript;
 
+    CameraShift CSScript;
+
     private void Start()
     {
         IPlaceScript = GameObject.FindWithTag("Ped").GetComponent<ItemPlace>();
         IPickupScript = GameObject.FindWithTag("Gem").GetComponent<ItemPickup>();
-        GMScript = GameObject.Find("GM").GetComponent<GameManager>();
+        GMScript = GameObject.FindWithTag("GM").GetComponent<GameManager>();
 
     }
 
     void Update()
     {
         scrollInput = Input.GetAxis("Scroll");
-        
-        if (scrollInput > 0/*gemList.Count > 0*/)
+        if (gemList.Count >= 1)
         {
-            //scrollCountTest += 1;
-            //Debug.Log("scrolled up, scrollCount= " + scrollCountTest);
-            // moves down the gem index list and then wraps back around to the beginning
-            int nextGemIndex = (currentGemIndex + 1) % gemList.Count;
-            SwitchGem(nextGemIndex);
-            /*if (currentGemIndex > 6)
+            if (scrollInput > 0/*gemList.Count > 0*/)
             {
-                currentGemIndex = 0;
-            }*/
-            Debug.Log("Gem= " + currentGemIndex);
-        }
-        else if (scrollInput < 0)
-        {
-            //scrollCountTest -= 1;
-            //Debug.Log("scrolled down, scrollCount= " + scrollCountTest);
-            /*int nextGemIndex = (currentGemIndex - 1) % gemList.Count;
-            SwitchGem(nextGemIndex);
-            if (currentGemIndex < 0)
+                // moves down the gem index list and then wraps back around to the beginning
+                int nextGemIndex = (currentGemIndex + 1) % gemList.Count;
+                SwitchGem(nextGemIndex);
+                /*if (currentGemIndex > 6)
+                {
+                    currentGemIndex = 0;
+                }*/
+                Debug.Log("Gem= " + currentGemIndex);
+            }
+            else if (scrollInput < 0)
             {
-                currentGemIndex = 6;
-            }*/
-            scrollInput = 0;
-            
-            Debug.Log("Gem= " + currentGemIndex);
+                /*int nextGemIndex = (currentGemIndex - 1) % gemList.Count;
+                SwitchGem(nextGemIndex);
+                if (currentGemIndex < 0)
+                {
+                    currentGemIndex = 6;
+                }*/
+                scrollInput = 0;
+
+                Debug.Log("Gem= " + currentGemIndex);
+            }
         }
     }
 
@@ -104,42 +104,35 @@ public class ItemManager : MonoBehaviour
         // audio cue
 
         // ** camera stuff (animation)
+        StartCoroutine(CSScript.CameraSwitch());
+
+
         // ** flowers changing
 
         // ** remove gem from the list?
-
         placedList.Add(gemList[currentGemIndex]);
         gemList.Remove(gemList[currentGemIndex]);
-        
 
-        /*if (placedList.Count == 2)
+        if (IPlaceScript.placedCount > 1)
         {
-            for (int i = 0; i < placedList.Count; i++)
+            if (placedList[0].name.Contains("Hold_GemBlue") || placedList[1].name.Contains("Hold_GemBlue"))
             {
-                // for the 1 active scenememberholder
-                if (placedList[0].name.Contains("Hold_GemBlue") || placedList[1].name.Contains("Hold_GemBlue"))
-                {
-                    hasBlue = true;
-                    Debug.Log("Blue placed");
-                    
-                }
-                // for the inactive scenememberholders
-                if (placedList[0].name.Contains("Hold_GemRed") || placedList[1].name.Contains("Hold_GemRed"))
-                {
-                    hasRed = true;
-                    Debug.Log("Red placed");
-                }
-                if (hasRed && hasBlue)
-                {
-                    Debug.Log("Placed blue & red!");
-                    solved = true;
-
-
-                }
+                hasBlue = true;
+                Debug.Log("Blue placed");
             }
-        }*/
+            if (placedList[0].name.Contains("Hold_GemRed") || placedList[1].name.Contains("Hold_GemRed"))
+            {
+                hasRed = true;
+                Debug.Log("Red placed");
+            }
+            if (hasRed && hasBlue)
+            {
+                Debug.Log("Placed blue & red!");
+                solved = true;
+                GMScript.puzzleSolve();
+            }
+        }
 
-        
 
         /*
         if (correct)

@@ -11,10 +11,18 @@ public class ItemPickup : MonoBehaviour
     // the transformsocket where the gem will be parented
     public Transform gemSocket;
 
+    CharacterPlayer PlayerControllerScript;
+
+    private void Start()
+    {
+        PlayerControllerScript = GameObject.Find("Player").GetComponent<CharacterPlayer>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            PlayerControllerScript.pickupDing.Play();
             // instantiate and parent directly to gem socket
             GameObject newGem = Instantiate(gemPrefab, gemSocket.position, Quaternion.identity, gemSocket);
 

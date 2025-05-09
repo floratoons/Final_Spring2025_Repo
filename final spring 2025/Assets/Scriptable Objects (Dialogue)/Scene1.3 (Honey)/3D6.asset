@@ -22,8 +22,8 @@ MonoBehaviour:
     nextLine: {fileID: 11400000, guid: 280af3163d47916488e10c6dd0f5f533, type: 2}
     requiredStat: 
     requiredValue: 0
-    rewardStat: 
-    rewardValue: 0
+    rewardStat: honeyNote
+    rewardValue: 1
   - choiceText: Ask her what she's doing here.
     nextLine: {fileID: 11400000, guid: b9760374af35f5b4d821233e1980e5b8, type: 2}
     requiredStat: 

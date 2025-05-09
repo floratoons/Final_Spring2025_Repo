@@ -29,5 +29,5 @@ MonoBehaviour:
     nextLine: {fileID: 11400000, guid: b7752c9344250894195efba7b6dd1db1, type: 2}
     requiredStat: 
     requiredValue: 0
-    rewardStat: 
-    rewardValue: 0
+    rewardStat: cjNote
+    rewardValue: 1

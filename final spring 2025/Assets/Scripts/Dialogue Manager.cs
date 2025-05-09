@@ -23,6 +23,8 @@ public class DialogueManager : MonoBehaviour
     public Transform choiceParent;
     public GameObject continueButton;
 
+
+
     public void StartingDialogue()
     {
         UpdateDialogue(currentLine);
@@ -153,7 +155,11 @@ public class DialogueManager : MonoBehaviour
             // waitforkeypresses
             //StartCoroutine(WaitForSpace());
 
-            for (int i = 0; i < 5; i++)
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+            yield return new WaitForSeconds(0.1f); //to avoid double input
+            UpdateDialogue(line.nextLine);
+            
+            /*for (int i = 0; i < 5; i++)
             {
                 while (!Input.GetKeyDown(KeyCode.Space))
                 {
@@ -163,7 +169,7 @@ public class DialogueManager : MonoBehaviour
 
                 UpdateDialogue(line.nextLine);
                 yield return null;
-            }
+            }*/
 
             // registering multiple space clicks, updating too fast/wrong order & instantiating textbubbles Wrong
 
@@ -185,15 +191,15 @@ public class DialogueManager : MonoBehaviour
         }
     }*/
 
-        /*int GetPlayerStatValue(string StatName)
+    /*int GetPlayerStatValue(string StatName)
+    {
+        switch (StatName)
         {
-            switch (StatName)
-            {
-                case "charisma": return PlayerStats.Instance.charisma;
-                case "logic": return PlayerStats.Instance.logic;
-                    default: return 0;
-            }
-        }*/
-
+            case "cjNote": return PlayerStats.Instance.stats[cjNote];
+            case "honeyNote": return PlayerStats.Instance.logic;
+            default: return 0;
+        }
+    }*/
 }
+
 

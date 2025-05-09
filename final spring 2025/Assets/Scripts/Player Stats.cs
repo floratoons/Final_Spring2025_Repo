@@ -22,9 +22,8 @@ public class PlayerStats : MonoBehaviour
             Destroy(gameObject);
         }
 
-        stats["charisma"] = 1;
-        stats["logic"] = 2;
-        stats["empathy"] = 1;
+        stats["cjNote"] = 0;
+        stats["honeyNote"] = 0;
 
     }
 

@@ -12,6 +12,8 @@ TagManager:
   - Ped
   - Gem
   - Portrait
+  - Stairs
+  - Grass
   layers:
   - Default
   - TransparentFX
@@ -21,8 +23,8 @@ TagManager:
   - UI
   - Sec 0
   - Sec 1
-  - 
-  - 
+  - Ground
+  - Columns
   - 
   - 
   - 

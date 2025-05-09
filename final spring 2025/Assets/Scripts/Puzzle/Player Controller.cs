@@ -21,8 +21,8 @@ public class CharacterPlayer : MonoBehaviour
     public bool onGround;
     public bool isJumping = false;
 
-    /*public bool isWalking = false;
-    public bool isClimbing = false;
+    public bool isWalking = false;
+    /*public bool isClimbing = false;
     public bool isIdle = true;
     Animator playerAnim;*/
 
@@ -32,13 +32,22 @@ public class CharacterPlayer : MonoBehaviour
 
     public GameObject respawnPos;
 
+    public ItemPlace IPScript;
+
     // sounds
-    // AudioSource walkSound;
+    AudioSource walkGrass;
+    AudioSource walkStairs;
+    float walkTimer;
+    public AudioSource inAreaShine;
+    public AudioSource placeClink;
+    public AudioSource pickupDing;
 
     // Start is called before the first frame update
+
     void Start()
     {
         //playerAnim = GameObject.Find("PlayerCharacter").GetComponent<Animator>();
+        walkTimer = 1f;
 
         Time.timeScale = 1f;
         controller = GetComponent<CharacterController>();
@@ -48,14 +57,24 @@ public class CharacterPlayer : MonoBehaviour
         Cursor.visible = false;
     }
 
+    private void Awake()
+    {
+        // sound effects
+        walkGrass = gameObject.GetComponents<AudioSource>()[0];
+        walkStairs = gameObject.GetComponents<AudioSource>()[1];
+        inAreaShine = gameObject.GetComponents<AudioSource>()[2];
+        placeClink = gameObject.GetComponents<AudioSource>()[3];
+        pickupDing = gameObject.GetComponents<AudioSource>()[4];
+    }
+
+
     // Update is called once per frame
     void Update()
     {
-
         PlayerFollow();
 
+        WalkSounds();
 
-        
         // restart build, test keys
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
@@ -68,10 +87,6 @@ public class CharacterPlayer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha8))
         {
             transform.position = new Vector3(97, 215, 294);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha7))
-        {
-            transform.position = new Vector3(1,-12,-4);
         }
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
@@ -108,15 +123,51 @@ public class CharacterPlayer : MonoBehaviour
             + (transform.right * horizontalInput * walkSpeed)
             + (Vector3.up * velocity.y);
        
-        /*if (depthInput != 0 || horizontalInput != 0)
+        if (depthInput != 0 || horizontalInput != 0)
         {
-            playerAnim.SetBool("isWalking", true);
+            isWalking = true;
+
         }
         else
         {
-            playerAnim.SetBool("isWalking", false);
-        }*/
+            isWalking = false;
+        }
+    }
 
+    private void WalkSounds()
+    {
+        if (gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            
+        }
+        else if (gameObject.layer == LayerMask.NameToLayer("Columns"))
+        {
+            Debug.Log("Walking on stairs");
+            walkStairs.Play();
+
+
+        }
+            walkTimer -= Time.deltaTime;
+
+            if (walkTimer < 0)
+            {
+                walkGrass.pitch = Random.Range(0.8f, 1.0f);
+                walkStairs.pitch = Random.Range(0.8f, 1.0f);
+                walkTimer = 1;
+            }
+
+        /* else if (other.CompareTag("Stairs"))
+            {
+                
+            }
+        }
+
+        else if (!isWalking)
+        {
+            walkGrass.Stop();
+            walkStairs.Stop();
+
+        }*/
     }
     
 
@@ -127,7 +178,9 @@ public class CharacterPlayer : MonoBehaviour
         if (onGround)
         {
             isJumping = false;
-            jumpForce = 10;
+            jumpForce = 20;
+
+            //walkGrass.Play();
 
             velocity.y = -1;
 

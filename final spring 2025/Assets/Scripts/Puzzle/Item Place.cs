@@ -7,33 +7,27 @@ public class ItemPlace : MonoBehaviour
     public bool inArea;
 
     public int pedestalNumber;
-    public Transform placeSpot1;
-    public Transform placeSpot2;
-    Vector3 scale1;
-    Vector3 scale2;
+    Vector3 scale1 = new Vector3((float)0.5, (float)2.5, (float)0.75);
+    Vector3 scale2 = new Vector3(3, 12, (float)3.5);
+    public GameObject placedon1;
+    public GameObject placedon2;
 
-    public Transform staticPlaceSpot;
+    public GameObject glow1;
+    public GameObject glow2;
+
+    public Transform placeSpot;
+    public int placedCount = 0;
     public bool itemPlaced = false;
 
     ItemManager ItemManagerScript;
+    CharacterPlayer PlayerControllerScript;
 
     public GameObject placedGem;
 
     private void Start()
     {
         ItemManagerScript = GameObject.Find("Player").GetComponent<ItemManager>();
-
-        scale1 = new Vector3((float)0.5, (float)2.5, (float)0.75);
-        scale2 = new Vector3((float)3, (float)12, (float)3.5);
-
-        if (pedestalNumber == 1)
-        {
-            staticPlaceSpot = placeSpot1;
-        }
-        else if (pedestalNumber == 2)
-        {
-            staticPlaceSpot = placeSpot2;
-        }
+        PlayerControllerScript = GameObject.Find("Player").GetComponent<CharacterPlayer>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -47,15 +41,27 @@ public class ItemPlace : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        // when in the area
+        if (pedestalNumber == 1)
+        {
+            PlayerControllerScript.inAreaShine.Play();
+            PlaceGem(glow1, scale1);
+        }
+        else if (pedestalNumber == 2)
+        {
+            PlayerControllerScript.inAreaShine.Play();
+            PlaceGem(glow2, scale2);
+        }
+        // moves the gem to its spot on the pedestal once it's placed
         if (itemPlaced)
         {
             if (other.CompareTag("Gem"))
             {
                 // get the place spot from the certain pedestal's trigger?
-                staticPlaceSpot = gameObject.GetComponentInChildren<Transform>();
+                placeSpot = gameObject.GetComponentInChildren<Transform>();
                 // grab the gem that is in the pedestal's trigger
                 placedGem = other.gameObject;
-                Debug.Log("Gem placed in area, " + (placedGem));
+                //Debug.Log("Gem placed in area, " + (placedGem));
                 //FindWithTag("Gem");
             }
         }
@@ -65,26 +71,32 @@ public class ItemPlace : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            PlayerControllerScript.inAreaShine.Stop();
             inArea = false;
             //turn off visual
+            glow1.SetActive(false);
+            glow2.SetActive(false);
         }
     }
 
-    void Update()
+    public void PlaceGem(GameObject glow, Vector3 scale)
     {
+        if (this.gameObject.activeInHierarchy && inArea)
         {
-            if (this.gameObject.activeInHierarchy && Input.GetMouseButtonDown(0) && inArea && pedestalNumber == 1)
+            glow.SetActive(true);
+
+            if (Input.GetMouseButtonDown(0))
             {
+                PlayerControllerScript.placeClink.Play();
+                glow1.SetActive(false);
+                placedCount++;
                 itemPlaced = true;
                 //place the object on a spot
-                ItemManagerScript.placeInSpot(staticPlaceSpot, scale1);
-            }
-            else if(this.gameObject.activeInHierarchy && Input.GetMouseButtonDown(0) && inArea && pedestalNumber == 2)
-            {
-                itemPlaced = true;
-                //place the object on a spot
-                ItemManagerScript.placeInSpot(staticPlaceSpot, scale2);
+                ItemManagerScript.placeInSpot(placeSpot, scale);
             }
         }
     }
+
+
 }
+

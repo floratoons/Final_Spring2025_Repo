@@ -6,30 +6,50 @@ public class CameraShift : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    public static CameraShift Instance;
+
     public Camera mainCam;
-    public GameObject fade;
+    public GameObject fadeTransition;
     public Camera birdsEyeCam;
+
+    private bool played = false;
 
     GameManager GMScript;
 
     private void Start()
     {
-
-        //GMScript = GameObject.Find("GM").GetComponent<>
+        GMScript = GameObject.FindWithTag("GM").GetComponent<GameManager>();
     }
 
-    IEnumerator cameraSwitch(Camera cam)
+    private void Update()
     {
-        /*fade.SetActive(true);
-        yield return new WaitUntil()
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            StartCoroutine(CameraSwitch());
+        }
+    }
+
+    /*public void AnimEvent(string s)
+    {
+        Debug.Log("AnimEvent: " + s + " called at: " + Time.time);
+        played = true;
+    }*/
+
+    public IEnumerator CameraSwitch()
+    {
+        fadeTransition.SetActive(true);
+        yield return new WaitForSeconds(1f);
         mainCam.enabled = false;
-        cam.enabled = true;*/
-        fade.SetActive(false);
+        fadeTransition.SetActive(false);
+        birdsEyeCam.enabled = true;
 
         yield return new WaitForSeconds(4f);
 
-        fade.SetActive(true);
-        cam.enabled = false;
+        fadeTransition.SetActive(true);
+
+        yield return new WaitForSeconds(1f);
+        birdsEyeCam.enabled = false;
+        fadeTransition.SetActive(false);
         mainCam.enabled = true;
     }
 }

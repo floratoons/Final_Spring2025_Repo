@@ -50,7 +50,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         MMScript = GameObject.Find("MM").GetComponent<MusicManager>();
-        DMScript = GameObject.Find("Dialogue Manager").GetComponent < DialogueManager>();
 
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
@@ -61,20 +60,24 @@ public class GameManager : MonoBehaviour
         {
             MMScript.MusicAbstract();
 
-            Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+
+            DMScript = GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>();
 
             // find the menu & notebook 
             menu = GameObject.FindWithTag("Menu").GetComponent<Canvas>();
             dialoguecanvas = GameObject.Find("DialogueBox").GetComponent<Canvas>();
 
+
             STScript = GameObject.Find("Camera").GetComponent<SceneTransitioner>();
-            cameraScript = GameObject.Find("Fade").GetComponent<CameraShift>();
         }
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             MMScript.MusicWater();
 
-            // find the menu, button & win note
+            //cameraScript = GameObject.Find("Fade").GetComponent<CameraShift>();
+
         }
     }
 
@@ -113,7 +116,7 @@ public class GameManager : MonoBehaviour
 
     public void puzzleSolve()
     {
-        //StartCoroutine(cameraScript.cameraSwitch(birdsEyeCam));
+        StartCoroutine(cameraScript.CameraSwitch());
 
         purple.SetActive(true);
         clue.SetActive(true);
