@@ -12,7 +12,9 @@ public class CameraShift : MonoBehaviour
     public GameObject fadeTransition;
     public Camera birdsEyeCam;
 
-    private bool played = false;
+    private int corCount = 0;
+
+    //private bool played = false;
 
     GameManager GMScript;
 
@@ -23,10 +25,10 @@ public class CameraShift : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha7))
+        /*if (Input.GetKeyDown(KeyCode.Alpha7))
         {
             StartCoroutine(CameraSwitch());
-        }
+        }*/
     }
 
     /*public void AnimEvent(string s)
@@ -37,19 +39,27 @@ public class CameraShift : MonoBehaviour
 
     public IEnumerator CameraSwitch()
     {
-        fadeTransition.SetActive(true);
-        yield return new WaitForSeconds(1f);
-        mainCam.enabled = false;
-        fadeTransition.SetActive(false);
-        birdsEyeCam.enabled = true;
+        if (birdsEyeCam != null)
+        {
+            corCount++;
+            Debug.Log($"CameraSwitch function called " + corCount + " times");
 
-        yield return new WaitForSeconds(4f);
+            fadeTransition.SetActive(true);
+            yield return new WaitForSeconds(1f);
+            mainCam.enabled = false;
+            fadeTransition.SetActive(false);
+            birdsEyeCam.enabled = true;
 
-        fadeTransition.SetActive(true);
+            yield return new WaitForSeconds(4f);
 
-        yield return new WaitForSeconds(1f);
-        birdsEyeCam.enabled = false;
-        fadeTransition.SetActive(false);
-        mainCam.enabled = true;
+            fadeTransition.SetActive(true);
+
+            yield return new WaitForSeconds(1f);
+            birdsEyeCam.enabled = false;
+            fadeTransition.SetActive(false);
+            mainCam.enabled = true;
+        }
+        
+        yield break;
     }
 }

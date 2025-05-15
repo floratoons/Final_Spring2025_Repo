@@ -37,7 +37,7 @@ public class CharacterPlayer : MonoBehaviour
     // sounds
     AudioSource walkGrass;
     AudioSource walkStairs;
-    float walkTimer;
+    //float walkTimer;
     public AudioSource inAreaShine;
     public AudioSource placeClink;
     public AudioSource pickupDing;
@@ -47,7 +47,7 @@ public class CharacterPlayer : MonoBehaviour
     void Start()
     {
         //playerAnim = GameObject.Find("PlayerCharacter").GetComponent<Animator>();
-        walkTimer = 1f;
+        //walkTimer = 1f;
 
         Time.timeScale = 1f;
         controller = GetComponent<CharacterController>();
@@ -67,13 +67,59 @@ public class CharacterPlayer : MonoBehaviour
         pickupDing = gameObject.GetComponents<AudioSource>()[4];
     }
 
+    /*private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Grass"))
+        {
+            startWalkSounds(walkGrass);
+        }
+        if (other.CompareTag("Stairs"))
+        {
+            startWalkSounds(walkStairs);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Grass"))
+        {
+            startWalkSounds(walkGrass);
+        }
+        if (other.CompareTag("Stairs"))
+        {
+            startWalkSounds(walkStairs);
+        }
+    }*/
+
+    private void startWalkSounds(AudioSource groundType)
+    {
+        Debug.Log($"WalkSounds started on + {groundType}");
+        /*walkTimer -= Time.deltaTime;
+
+        if (walkTimer < 0)
+        {
+            groundType.pitch = Random.Range(0.8f, 1.0f);
+            walkTimer = 1;
+        }*/
+
+        if (onGround && isWalking)
+        {
+            Debug.Log($"Walking on + {groundType}");
+            groundType.Play();
+        }
+        /*else if (onGround && !isWalking)
+        {
+            groundType.Stop();
+        }
+        else if (!onGround)
+        {
+            groundType.Stop();
+        }*/
+    }
 
     // Update is called once per frame
     void Update()
     {
         PlayerFollow();
-
-        WalkSounds();
 
         // restart build, test keys
         if (Input.GetKeyDown(KeyCode.Alpha0))
@@ -126,7 +172,6 @@ public class CharacterPlayer : MonoBehaviour
         if (depthInput != 0 || horizontalInput != 0)
         {
             isWalking = true;
-
         }
         else
         {
@@ -134,42 +179,6 @@ public class CharacterPlayer : MonoBehaviour
         }
     }
 
-    private void WalkSounds()
-    {
-        if (gameObject.layer == LayerMask.NameToLayer("Ground"))
-        {
-            
-        }
-        else if (gameObject.layer == LayerMask.NameToLayer("Columns"))
-        {
-            Debug.Log("Walking on stairs");
-            walkStairs.Play();
-
-
-        }
-            walkTimer -= Time.deltaTime;
-
-            if (walkTimer < 0)
-            {
-                walkGrass.pitch = Random.Range(0.8f, 1.0f);
-                walkStairs.pitch = Random.Range(0.8f, 1.0f);
-                walkTimer = 1;
-            }
-
-        /* else if (other.CompareTag("Stairs"))
-            {
-                
-            }
-        }
-
-        else if (!isWalking)
-        {
-            walkGrass.Stop();
-            walkStairs.Stop();
-
-        }*/
-    }
-    
 
     private void MovePlayer()
     {

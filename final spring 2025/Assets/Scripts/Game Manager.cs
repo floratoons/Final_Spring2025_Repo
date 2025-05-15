@@ -10,20 +10,14 @@ public class GameManager : MonoBehaviour
     ButtonManager BMScript;
     SceneTransitioner STScript;
     DialogueManager DMScript;
-    CameraShift cameraScript;
+    ItemManager IMScript;
 
     public Canvas menu;
     public Canvas dialoguecanvas;
-    public Canvas wincanvas;
     public Image menubutton;
+    public GameObject tut;
 
-    // puzzle game
-
-    public GameObject red;
-    public GameObject blue;
-    public GameObject purple;
-
-    public GameObject clue;
+    
 
     //bool solvedPuzzle1 = false;
 
@@ -32,7 +26,6 @@ public class GameManager : MonoBehaviour
     // last "currentline" from dialogue manager for the last dialogue line read
     // last "currentchapter" for the last chapter (all dialoguesections in a location in a day) finished
     // 
-
 
 
     void Awake()
@@ -49,6 +42,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(Tutorial());
+        
         MMScript = GameObject.Find("MM").GetComponent<MusicManager>();
 
         if (SceneManager.GetActiveScene().buildIndex == 0)
@@ -69,14 +64,13 @@ public class GameManager : MonoBehaviour
             menu = GameObject.FindWithTag("Menu").GetComponent<Canvas>();
             dialoguecanvas = GameObject.Find("DialogueBox").GetComponent<Canvas>();
 
-
             STScript = GameObject.Find("Camera").GetComponent<SceneTransitioner>();
         }
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             MMScript.MusicWater();
 
-            //cameraScript = GameObject.Find("Fade").GetComponent<CameraShift>();
+            IMScript = gameObject.GetComponent<ItemManager>();
 
         }
     }
@@ -113,18 +107,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-    public void puzzleSolve()
+    public IEnumerator Tutorial()
     {
-        StartCoroutine(cameraScript.CameraSwitch());
+        tut.SetActive(true);
+        if (tut == true && Input.GetKey(KeyCode.W))
+        {
+            tut.SetActive(false);
+        }
+        yield return new WaitForSeconds(5f);
+        tut.SetActive(false);
 
-        purple.SetActive(true);
-        clue.SetActive(true);
-
-        //solvedPuzzle1 = true;
     }
-
-    
 
 
 }

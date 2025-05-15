@@ -12,10 +12,12 @@ public class ItemPickup : MonoBehaviour
     public Transform gemSocket;
 
     CharacterPlayer PlayerControllerScript;
+    ItemManager ItemManagerScript;
 
     private void Start()
     {
         PlayerControllerScript = GameObject.Find("Player").GetComponent<CharacterPlayer>();
+        ItemManagerScript = GameObject.Find("Player").GetComponent<ItemManager>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,7 +33,7 @@ public class ItemPickup : MonoBehaviour
             newGem.transform.localRotation = Quaternion.identity;
 
             // ** add gem to the list, and destroy the gem pickup object
-            other.GetComponent<ItemManager>().AddGem(newGem);
+            other.GetComponent<ItemManager>().AddGem(newGem, ItemManagerScript.gemList);
             gameObject.SetActive(false);
 
         }

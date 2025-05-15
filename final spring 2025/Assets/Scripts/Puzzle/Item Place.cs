@@ -16,11 +16,12 @@ public class ItemPlace : MonoBehaviour
     public GameObject glow2;
 
     public Transform placeSpot;
-    public int placedCount = 0;
+    //public int placedCount = 0;
     public bool itemPlaced = false;
 
     ItemManager ItemManagerScript;
     CharacterPlayer PlayerControllerScript;
+    CameraShift CSScript;
 
     public GameObject placedGem;
 
@@ -28,6 +29,7 @@ public class ItemPlace : MonoBehaviour
     {
         ItemManagerScript = GameObject.Find("Player").GetComponent<ItemManager>();
         PlayerControllerScript = GameObject.Find("Player").GetComponent<CharacterPlayer>();
+        CSScript = GameObject.Find("Fade").GetComponent<CameraShift>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -35,6 +37,7 @@ public class ItemPlace : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             inArea = true;
+            PlayerControllerScript.inAreaShine.Play();
             // visual cue
         }
     }
@@ -44,12 +47,10 @@ public class ItemPlace : MonoBehaviour
         // when in the area
         if (pedestalNumber == 1)
         {
-            PlayerControllerScript.inAreaShine.Play();
             PlaceGem(glow1, scale1);
         }
         else if (pedestalNumber == 2)
         {
-            PlayerControllerScript.inAreaShine.Play();
             PlaceGem(glow2, scale2);
         }
         // moves the gem to its spot on the pedestal once it's placed
@@ -83,16 +84,21 @@ public class ItemPlace : MonoBehaviour
     {
         if (this.gameObject.activeInHierarchy && inArea)
         {
-            glow.SetActive(true);
+            if (placedGem = null)
+            {
+                glow.SetActive(true);
+            }
 
             if (Input.GetMouseButtonDown(0))
             {
                 PlayerControllerScript.placeClink.Play();
-                glow1.SetActive(false);
-                placedCount++;
+
+                StartCoroutine(CSScript.CameraSwitch());
+                glow.SetActive(false);
+                //placedCount++;
                 itemPlaced = true;
                 //place the object on a spot
-                ItemManagerScript.placeInSpot(placeSpot, scale);
+                ItemManagerScript.moveToPlaceSpot(placeSpot, scale);
             }
         }
     }

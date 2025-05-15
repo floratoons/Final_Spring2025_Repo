@@ -5,13 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
-    AudioSource bkgMusic;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        bkgMusic = gameObject.GetComponent<AudioSource>();
-    }
 
     public void MusicWater()
     {

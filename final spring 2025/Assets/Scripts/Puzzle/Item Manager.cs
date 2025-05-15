@@ -8,8 +8,8 @@ public class ItemManager : MonoBehaviour
     public List<GameObject> gemList = new List<GameObject>();
 
     public List<GameObject> placedList = new List<GameObject>();
-    private bool hasBlue = false;
-    private bool hasRed = false;
+    public bool hasBlue = false;
+    public bool hasRed = false;
     private bool solved = false;
 
     // index to track currently active gem
@@ -21,6 +21,7 @@ public class ItemManager : MonoBehaviour
     ItemPlace IPlaceScript;
     ItemPickup IPickupScript;
     GameManager GMScript;
+    PuzzleManager PMScript;
 
     CameraShift CSScript;
 
@@ -29,6 +30,8 @@ public class ItemManager : MonoBehaviour
         IPlaceScript = GameObject.FindWithTag("Ped").GetComponent<ItemPlace>();
         IPickupScript = GameObject.FindWithTag("Gem").GetComponent<ItemPickup>();
         GMScript = GameObject.FindWithTag("GM").GetComponent<GameManager>();
+        CSScript = GameObject.Find("Fade").GetComponent<CameraShift>();
+        PMScript = GameObject.Find("Puzzle Manager").GetComponent<PuzzleManager>();
 
     }
 
@@ -63,17 +66,20 @@ public class ItemManager : MonoBehaviour
         }
     }
 
-    public void AddGem(GameObject gemPrefab)
+    public void AddGem(GameObject gemPrefab, List<GameObject> list)
     {
         //add the instantiated gem to the list
         gemList.Add(gemPrefab);
         gemPrefab.SetActive(false); // start with the gem disabled
 
         // immediately activate the first gem that's picked up
-        if (gemList.Count == 1)
+        if (list == gemList)
         {
-            // switch gem function
-            SwitchGem(0);
+            if (list.Count == 1)
+            {
+                // switch gem function
+                SwitchGem(0);
+            }
         }
     }
 
@@ -92,7 +98,7 @@ public class ItemManager : MonoBehaviour
         Debug.Log("Switched gem");
     }
 
-    public void placeInSpot(Transform placeSpot, Vector3 scale)
+    public void moveToPlaceSpot(Transform placeSpot, Vector3 scale)
     {
         // get current gem in index
         gemList[currentGemIndex].transform.localScale = gemList[currentGemIndex].transform.localScale;
@@ -113,7 +119,7 @@ public class ItemManager : MonoBehaviour
         placedList.Add(gemList[currentGemIndex]);
         gemList.Remove(gemList[currentGemIndex]);
 
-        if (IPlaceScript.placedCount > 1)
+        if (placedList.Count >= 1)
         {
             if (placedList[0].name.Contains("Hold_GemBlue") || placedList[1].name.Contains("Hold_GemBlue"))
             {
@@ -128,25 +134,22 @@ public class ItemManager : MonoBehaviour
             if (hasRed && hasBlue)
             {
                 Debug.Log("Placed blue & red!");
-                solved = true;
-                GMScript.puzzleSolve();
             }
         }
 
-
-        /*
-        if (correct)
+        if (IPlaceScript.pedestalNumber == 1 && IPlaceScript.itemPlaced)
         {
-            **register correct placement, lock/ turn off the place area
-              visual cue on the placed gem to show that it's locked
+            Debug.Log("Placed gem in spot 1 (taken)");
+            AddGem(IPlaceScript.placedGem, gemList);
+            placedList.Remove(gemList[0]);
         }
-        else if (incorrect)
+        if (IPlaceScript.pedestalNumber == 2 && IPlaceScript.itemPlaced)
         {
-            audio cue that it's wrong
+            Debug.Log("Placed gem in spot 2 (taken)");
+            AddGem(IPlaceScript.placedGem, gemList);
+            placedList.Remove(gemList[1]);
         }
-        */
-
-
     }
+
 
 }
