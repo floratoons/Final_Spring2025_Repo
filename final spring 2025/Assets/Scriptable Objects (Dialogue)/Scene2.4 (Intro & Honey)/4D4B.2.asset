@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 4D4B.2
+  m_EditorClassIdentifier: 
+  speakerName: '?'
+  sceneSectionNum: 5
+  dialogueLinesList:
+  - '"OMG, hey, you!"'
+  nextLine: {fileID: 0}
+  choices:
+  - choiceText: Tell her your name.
+    nextLine: {fileID: 11400000, guid: d939d326a1cc16f4990456739e07f9d3, type: 2}
+    requiredStat: 
+    requiredValue: 0
+    rewardStat: 
+    rewardValue: 0
+  - choiceText: Ask about "fans."
+    nextLine: {fileID: 11400000, guid: c24b20326b062904e9e0c6157fc65f5d, type: 2}
+    requiredStat: 
+    requiredValue: 0
+    rewardStat: 
+    rewardValue: 0

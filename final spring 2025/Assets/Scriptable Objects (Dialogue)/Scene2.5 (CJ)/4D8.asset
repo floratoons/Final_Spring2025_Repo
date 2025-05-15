@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 4D8
+  m_EditorClassIdentifier: 
+  speakerName: 
+  sceneSectionNum: 6
+  dialogueLinesList:
+  - "She looks really genuine. It makes your chest hurt. You don\u2019t mean to shut
+    people out, especially not a good friend of yours, but it\u2019s just hard to
+    talk to people when you\u2019re so exhausted all the time."
+  - "It\u2019s hard to feel like you\u2019re not wasting their time when the only
+    thing you can really manage is being in the same space as someone. But you know
+    CJ doesn\u2019t mind."
+  - "You look up at her, and find her gazing past you, at the people on the big ferry
+    behind you. Honey should be up there\u2026 and you can\u2019t help but wonder
+    what CJ\u2019s thinking."
+  nextLine: {fileID: 0}
+  choices:
+  - choiceText: Ask her what she's thinking.
+    nextLine: {fileID: 11400000, guid: 76ad259a5135d4a4a97ed53b90b2db61, type: 2}
+    requiredStat: 
+    requiredValue: 0
+    rewardStat: 
+    rewardValue: 0
+  - choiceText: Ask her what she's up to.
+    nextLine: {fileID: 11400000, guid: 1b227dbfc49c997409818859913df3a9, type: 2}
+    requiredStat: 
+    requiredValue: 0
+    rewardStat: 
+    rewardValue: 0

@@ -16,5 +16,5 @@ MonoBehaviour:
   sceneSectionNum: 0
   dialogueLinesList:
   - ...
-  nextLine: {fileID: 11400000, guid: 3f0f7dfa4775060438dd197f965a2acc, type: 2}
+  nextLine: {fileID: 11400000, guid: a6d338d4e3909c749b5d2ae46aebd254, type: 2}
   choices: []

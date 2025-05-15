@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 4D4B.B.4
+  m_EditorClassIdentifier: 
+  speakerName: 
+  sceneSectionNum: 5
+  dialogueLinesList:
+  - You take them all in. A tall, pretty young man with gold-rimmed glasses, people
+    with stripes and vibrant colors dyed into their hair, girls wearing frilly patterned
+    skirts with bags heavy with charms and plush keychains.
+  - "Not exactly the typical ghost-hunting tourists that have been so\u2026 everywhere,
+    these days. This crowd would look more at home at an art school in the city,
+    or maybe a really expensive, cool, themed cafe."
+  nextLine: {fileID: 11400000, guid: 4342b239cd386cb49bd139bb2d1d260d, type: 2}
+  choices: []

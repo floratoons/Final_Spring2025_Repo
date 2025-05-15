@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 4D4
+  m_EditorClassIdentifier: 
+  speakerName: 
+  sceneSectionNum: 4
+  dialogueLinesList:
+  - You head down the steep cobblestone steps that descend towards the waterside,
+    pulling earbuds from your ears and raising your hand and then lowering it. Opening
+    your mouth, closing it. Are you going to call out to her? Wave? You hesitate.
+  nextLine: {fileID: 0}
+  choices:
+  - choiceText: Call out her name.
+    nextLine: {fileID: 11400000, guid: f01e26fbcd5dd824ea3cfe98c2219123, type: 2}
+    requiredStat: honeyNote
+    requiredValue: 1
+    rewardStat: 
+    rewardValue: 0
+  - choiceText: Walk up to her, and try to get her attention.
+    nextLine: {fileID: 11400000, guid: 018788cbd5ed83c49a0d7d68ba6e7a41, type: 2}
+    requiredStat: 
+    requiredValue: 0
+    rewardStat: 
+    rewardValue: 0

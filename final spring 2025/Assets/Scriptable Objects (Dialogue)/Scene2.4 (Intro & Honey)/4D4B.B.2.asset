@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 4D4B.B.2
+  m_EditorClassIdentifier: 
+  speakerName: 
+  sceneSectionNum: 5
+  dialogueLinesList:
+  - "The people around you had promptly redirected their conversation amongst themselves
+    as soon as you diverted the girl\u2019s attention away from them."
+  - She gestures broadly to them all, and giggles a little. Cute.
+  nextLine: {fileID: 11400000, guid: bb0ab001eef6b7242a2f49583ef53f7a, type: 2}
+  choices: []

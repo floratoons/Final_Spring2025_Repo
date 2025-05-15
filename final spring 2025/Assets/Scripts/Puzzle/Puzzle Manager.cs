@@ -45,7 +45,7 @@ public class PuzzleManager : MonoBehaviour
             }
             if (IMScript.hasBlue && IMScript.hasRed)
             {
-                StartCoroutine(cameraScript.CameraSwitch());
+                //StartCoroutine(cameraScript.CameraSwitch());
 
                 ifSolved = true;
 

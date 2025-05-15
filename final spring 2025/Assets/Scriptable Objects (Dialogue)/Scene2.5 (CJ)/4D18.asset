@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 4D18
+  m_EditorClassIdentifier: 
+  speakerName: 
+  sceneSectionNum: 4
+  dialogueLinesList:
+  - "You\u2019re really glad you got the chance to actually talk to her. Maybe it\u2019s
+    a good thing that you got drawn out of your little bubble by all\u2026 this. "
+  - The ghost hunters, the case. You wonder if CJ or Honey would actually want to
+    look into things with you.
+  nextLine: {fileID: 11400000, guid: 179716b9db293df418573dc745141a13, type: 2}
+  choices: []

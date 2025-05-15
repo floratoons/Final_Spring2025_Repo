@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 4D12
+  m_EditorClassIdentifier: 
+  speakerName: CJ
+  sceneSectionNum: 6
+  dialogueLinesList:
+  - "\u201CI\u2019ll bring you to the new cafe if you want, Io. We can go whenever
+    you\u2019re free, okay? You don\u2019t have to go with a random tourist.\u201D"
+  - "Is she really jealous? You don\u2019t know how to feel about that. You gently
+    move her hand off of your arm, and turn to the ferry where it\u2019s pulling
+    away."
+  nextLine: {fileID: 11400000, guid: c9b4d5d50c023a143ad3a4e34cf03139, type: 2}
+  choices: []

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 4D14
+  m_EditorClassIdentifier: 
+  speakerName: CJ
+  sceneSectionNum: 6
+  dialogueLinesList:
+  - "\u201COh. Okay.\u201D"
+  - "She let out a sight in what had to be relief. You\u2019d really like to give
+    her a reassuring smile, though you can\u2019t seem to form it. And you\u2019re
+    finding it tough to meet her eyes again."
+  - "\u201CIo, if I call you soon, will you pick up?\u201D"
+  nextLine: {fileID: 11400000, guid: eebb27b5918bbfb41afb822c0cb800ef, type: 2}
+  choices:
+  - choiceText: Of course.
+    nextLine: {fileID: 11400000, guid: 0591eedaa0e63b843b91f3bd44bf9dcc, type: 2}
+    requiredStat: 
+    requiredValue: 0
+    rewardStat: cjNote
+    rewardValue: 1
+  - choiceText: Probably?
+    nextLine: {fileID: 11400000, guid: 388bc53b2299c88439ba716c213dd621, type: 2}
+    requiredStat: 
+    requiredValue: 0
+    rewardStat: 
+    rewardValue: 0

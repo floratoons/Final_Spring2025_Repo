@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 4D10
+  m_EditorClassIdentifier: 
+  speakerName: CJ
+  sceneSectionNum: 6
+  dialogueLinesList:
+  - "\u201CReally? I thought you were really annoyed by all the ghost hunting business.\u201D"
+  - She touches your arm, and you feel your face heating up a little bit.
+  nextLine: {fileID: 11400000, guid: 96a37274c2029d847bc97a751ec2b6a0, type: 2}
+  choices: []

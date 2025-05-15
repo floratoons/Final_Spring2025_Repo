@@ -10,7 +10,6 @@ public class ItemManager : MonoBehaviour
     public List<GameObject> placedList = new List<GameObject>();
     public bool hasBlue = false;
     public bool hasRed = false;
-    private bool solved = false;
 
     // index to track currently active gem
     private int currentGemIndex = -1; // start with no gem

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 4D8A.1
+  m_EditorClassIdentifier: 
+  speakerName: Io
+  sceneSectionNum: 6
+  dialogueLinesList:
+  - "\u201CWhat\u2019s up? I mean, what\u2019re you thinking about, CJ?\u201D"
+  nextLine: {fileID: 11400000, guid: 1031e7dffb1ce4b4185b11aabce7f385, type: 2}
+  choices: []

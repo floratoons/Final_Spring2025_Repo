@@ -16,5 +16,5 @@ MonoBehaviour:
   sceneSectionNum: 3
   dialogueLinesList:
   - '"Thanks, cutie!"'
-  nextLine: {fileID: 11400000, guid: efd54217b7fcf3044b84b35830716e22, type: 2}
+  nextLine: {fileID: 11400000, guid: 22f586cde900ef549b9a42436fec62b3, type: 2}
   choices: []

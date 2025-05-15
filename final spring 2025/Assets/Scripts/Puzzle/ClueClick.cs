@@ -9,7 +9,7 @@ public class ClueClick : MonoBehaviour
     public bool inClueArea = false;
     public GameObject winCanvas;
 
-    public Button sceneButton;
+    public GameObject sceneButton;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -26,13 +26,13 @@ public class ClueClick : MonoBehaviour
             winCanvas.SetActive (true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-        }
-        if (sceneButton != null)
-        {
-            sceneButton.onClick.AddListener(() =>
+            if (sceneButton != null)
             {
-                SceneManager.LoadScene(1);
-            });
+                if (Input.GetKeyDown(KeyCode.U))
+                {
+                    SceneManager.LoadScene(1);
+                }
+            }
         }
     }
 }

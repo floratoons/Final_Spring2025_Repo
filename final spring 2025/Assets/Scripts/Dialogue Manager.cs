@@ -117,7 +117,7 @@ public class DialogueManager : MonoBehaviour
                 buttonText.text = choice.choiceText;
                 if (!meetsRequirement)
                 {
-                    buttonText.text += $"<color=red> Needs ({choice.requiredValue}) {choice.requiredStat}.";
+                    buttonText.text += $"<color=red> Missed conversation.";
                     //buttonText.text += "<color=red>" + choice.requiredStat + ": " + choice.requiredValue + "</color>";
                 }
 

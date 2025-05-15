@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 4D4A.A.6
+  m_EditorClassIdentifier: 
+  speakerName: Honey
+  sceneSectionNum: 5
+  dialogueLinesList:
+  - 'Her face falls a little, and you feel a bit embarrassed for asking.
+
+'
+  - "\u201CSorry, Io, I don\u2019t think I have time! We\u2019re waiting for the
+    ferry and, like, I\u2019m worried I\u2019d miss it if I go back up the street
+    into town again. "
+  - "It\u2019s kind of important. Gotta check out the island, y\u2019know? Investigate
+    the case.\u201D\r\n"
+  nextLine: {fileID: 11400000, guid: 10ebc6f2c4c0d6b48a1e0b670f7a5e80, type: 2}
+  choices: []

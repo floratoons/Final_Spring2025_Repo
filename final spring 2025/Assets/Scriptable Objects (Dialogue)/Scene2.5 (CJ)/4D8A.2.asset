@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 4D8A.2
+  m_EditorClassIdentifier: 
+  speakerName: CJ
+  sceneSectionNum: 6
+  dialogueLinesList:
+  - "\u201CHuh? Oh. I was just\u2026 you were talking with that girl earlier. I didn\u2019t
+    wanna interrupt.\u201D"
+  - "She sounds a little upset. Maybe\u2026 jealous? No, that\u2019s stupid. She
+    doesn\u2019t have anything to be jealous of."
+  - "She\u2019s stepping a little closer to you, looking at you with that softness
+    in her eyes."
+  nextLine: {fileID: 11400000, guid: 9892cd91fcbe2bf41b9f7fee6bb27e9b, type: 2}
+  choices: []

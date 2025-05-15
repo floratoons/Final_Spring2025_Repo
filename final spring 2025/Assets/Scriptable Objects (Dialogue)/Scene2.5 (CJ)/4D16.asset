@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6dbda3037e1b45bb90c9ca48419f1, type: 3}
+  m_Name: 4D16
+  m_EditorClassIdentifier: 
+  speakerName: Io
+  sceneSectionNum: 6
+  dialogueLinesList:
+  - "\u201COkay! Bye, CJ.\u201D"
+  - She looks at you with that expression again as she leaves. She kind of reminds
+    you of a sad puppy. You give her a little half-smile and she nods, nudging the
+    cobblestone curb with the tip of her work boot.
+  - "\u201CI\u2019ll be waiting for your phone call.\u201D"
+  nextLine: {fileID: 11400000, guid: aa8e6c2e11e6e5142a916972bb9192e4, type: 2}
+  choices: []
