@@ -3,7 +3,22 @@ guid: 26a19d510c0339940a9a35b48de7e317
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flower05LeafPetals
+    second: {fileID: 2100000, guid: 1c8cf64058fc7b64aa903dedcce82ab8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flower05PetalEdge
+    second: {fileID: 2100000, guid: 1c8cf64058fc7b64aa903dedcce82ab8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flower05Petals.001
+    second: {fileID: 2100000, guid: 1c8cf64058fc7b64aa903dedcce82ab8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

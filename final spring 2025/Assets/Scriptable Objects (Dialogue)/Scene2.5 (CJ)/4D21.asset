@@ -17,8 +17,5 @@ MonoBehaviour:
   dialogueLinesList:
   - "What could be the chances of you finding something like this, when\u2026 when
     the house on the island is, without a doubt, painted green."
-  - "Squeezing out the small remaining dampness in the shirt, and slowly picking
-    the pieces of wood out of the large tears in its sleeve, you tuck both things
-    into your bag, and head for home. It\u2019s getting dark out. Time to go to bed."
-  nextLine: {fileID: 0}
+  nextLine: {fileID: 11400000, guid: e7ee68e3f22aff8449833753b77b0dbb, type: 2}
   choices: []

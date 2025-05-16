@@ -16,5 +16,5 @@ MonoBehaviour:
   sceneSectionNum: 3
   dialogueLinesList:
   - "\u201CThanks! See you around?\u201D"
-  nextLine: {fileID: 11400000, guid: 4e4b350fe1f10744eba2666c1da5d77a, type: 2}
+  nextLine: {fileID: 11400000, guid: 2bc75ed7f07a9754a8b89d734f39dafb, type: 2}
   choices: []

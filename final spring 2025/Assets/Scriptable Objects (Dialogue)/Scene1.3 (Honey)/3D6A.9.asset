@@ -16,5 +16,5 @@ MonoBehaviour:
   sceneSectionNum: 3
   dialogueLinesList:
   - "\u201CCool. Can I get that coffee, Io?\u201D"
-  nextLine: {fileID: 0}
+  nextLine: {fileID: 11400000, guid: 4a5382977d5439c48b04193db23c6cea, type: 2}
   choices: []

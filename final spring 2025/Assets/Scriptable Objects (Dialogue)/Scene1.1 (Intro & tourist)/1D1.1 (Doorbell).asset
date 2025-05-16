@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 1D1.1 (Doorbell)
   m_EditorClassIdentifier: 
   speakerName: 
+  sceneSectionNum: 0
   dialogueLinesList:
   - "*Ding ding!*\r"
   nextLine: {fileID: 11400000, guid: 9acfc8a01fb762045ab22ebd10871904, type: 2}

@@ -73,10 +73,20 @@ public class GameManager : MonoBehaviour
             IMScript = gameObject.GetComponent<ItemManager>();
 
         }
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            MMScript.MusicTadpole();
+        }
     }
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            SceneManager.LoadScene(0);
+        }
+
+
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             if (Input.GetKeyDown(KeyCode.M))

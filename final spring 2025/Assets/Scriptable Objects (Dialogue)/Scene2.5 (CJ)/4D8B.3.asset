@@ -16,5 +16,5 @@ MonoBehaviour:
   sceneSectionNum: 6
   dialogueLinesList:
   - "\u201CYeah, I think so. We should be hanging out after work.\u201D"
-  nextLine: {fileID: 0}
+  nextLine: {fileID: 11400000, guid: 327f0082af934e243a9f65ff23081344, type: 2}
   choices: []

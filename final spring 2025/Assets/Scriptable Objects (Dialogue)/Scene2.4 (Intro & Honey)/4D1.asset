@@ -18,5 +18,5 @@ MonoBehaviour:
   - "It\u2019s pretty clear out. A cool, refreshing breeze blows in from over the
     bay, and you look out over the crowds dotting the small boardwalk that leads
     out onto the piers."
-  nextLine: {fileID: 0}
+  nextLine: {fileID: 11400000, guid: d3ca0ed3ae50b4949a93c0a1fbec7779, type: 2}
   choices: []

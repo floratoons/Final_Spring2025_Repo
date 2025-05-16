@@ -28,9 +28,13 @@ public class ClueClick : MonoBehaviour
             Cursor.visible = true;
             if (sceneButton != null)
             {
-                if (Input.GetKeyDown(KeyCode.U))
+                if (SceneManager.GetActiveScene().buildIndex == 2)
                 {
                     SceneManager.LoadScene(1);
+                }
+                else if(SceneManager.GetActiveScene().buildIndex == 3)
+                {
+                    SceneManager.LoadScene(0);
                 }
             }
         }

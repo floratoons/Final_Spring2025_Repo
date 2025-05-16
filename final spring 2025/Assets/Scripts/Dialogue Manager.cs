@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -34,8 +35,13 @@ public class DialogueManager : MonoBehaviour
     {
         // depending on what the new scene is, update the images to be enabled or disabled
 
-        // cycle through the sceneMemberHolders list for all the scene section parents
-        // simplified version LETSGOOOOOOOOOO
+            // cycle through the sceneMemberHolders list for all the scene section parents
+            // simplified version LETSGOOOOOOOOOO
+
+        if (newScene == 9)
+        {
+            SceneManager.LoadScene(3);
+        }
 
         for (int i = 0; i < sceneMemberHolders.Count; i++)
         {
